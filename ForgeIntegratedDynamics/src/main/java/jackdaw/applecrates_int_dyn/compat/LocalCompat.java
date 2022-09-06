@@ -1,4 +1,4 @@
-package jackdaw.applecrates.compat;
+package jackdaw.applecrates_int_dyn.compat;
 
 import jackdaw.applecrates.api.AppleCrateAPI.AppleCrateBuilder;
 
