@@ -82,6 +82,11 @@ dependencies {
     compileOnly project(":Common")
 
     implementation fg.deobf("curse.maven:apple-crates-630726:${apple_crates_file}")
+    runtimeOnly fg.deobf("curse.maven:valhelsia-core-416935:3843952")
+
+    //didnt manage to make ivy run, and the mod cant be dsitributed, so lets not make an addon for this
+//    runtimeOnly fg.deobf("curse.maven:forbidden-arcanus-309858:3844093")
+//    runtimeOnly fg.deobf("3844093:forbidden_arcanus:1.19-2.1.0-beta1:jar")
 
     //runtimeOnly fg.deobf("curse.maven:-:")
 }
@@ -99,6 +104,14 @@ repositories { //all of these are for adding crates compat
     maven {
         url = "https://maven.theillusivec4.top/"
     }
+
+    //use ivy to fetch forbidden arcanus. cant fetch it trough CFMaven because the author restricted distribution
+//    ivy {
+//        url "https://mediafiles.forgecdn.net/files/3844/93/"
+//        patternLayout {
+//            artifact '[module]-[revision].[ext]'
+//        }
+//    }
 }
 
 tasks.withType(JavaCompile) {

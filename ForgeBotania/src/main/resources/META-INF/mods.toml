@@ -39,6 +39,6 @@ side = "BOTH"
 [[dependencies.applecrates_botania]]
 modId = "applecrates"
 mandatory = true
-versionRange = "[0.8.0,)"
+versionRange = "[2,)"
 ordering = "NONE"
 side = "SERVER"

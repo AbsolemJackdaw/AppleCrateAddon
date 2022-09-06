@@ -82,7 +82,7 @@ dependencies {
     compileOnly project(":Common")
 
     implementation fg.deobf("curse.maven:apple-crates-630726:${apple_crates_file}")
-
+    //runtimeOnly fg.deobf("curse.maven:fruit-trees-355467:")
 
     //runtimeOnly fg.deobf("curse.maven:-:")
 }
