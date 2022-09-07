@@ -82,6 +82,8 @@ dependencies {
     compileOnly project(":Common")
     //mods
     implementation fg.deobf("curse.maven:apple-crates-630726:${apple_crates_file}")
+    runtimeOnly fg.deobf("curse.maven:enlightened-end-502786:${enl_end_file}")
+
     //runtimeOnly fg.deobf("curse.maven:-:")
 }
 

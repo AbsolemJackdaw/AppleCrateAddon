@@ -83,6 +83,8 @@ dependencies {
 
     //mods
     implementation fg.deobf("curse.maven:apple-crates-630726:${apple_crates_file}")
+    runtimeOnly fg.deobf("curse.maven:tinkers-construct-74072:${tcon_file}")
+    runtimeOnly fg.deobf("curse.maven:3829975-74924:${mantle_file}")
 
     //runtimeOnly fg.deobf("curse.maven:-:")
 }

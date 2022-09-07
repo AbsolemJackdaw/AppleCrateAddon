@@ -82,6 +82,7 @@ dependencies {
     compileOnly project(":Common")
 
     implementation fg.deobf("curse.maven:apple-crates-630726:${apple_crates_file}")
+    runtimeOnly fg.deobf("curse.maven:solar-forge-479100:${solar_file}")
 
 
     //runtimeOnly fg.deobf("curse.maven:-:")

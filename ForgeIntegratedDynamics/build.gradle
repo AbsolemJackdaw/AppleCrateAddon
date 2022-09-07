@@ -84,9 +84,9 @@ dependencies {
     //mods
     implementation fg.deobf("curse.maven:apple-crates-630726:${apple_crates_file}")
 
-    runtimeOnly fg.deobf("curse.maven:integrated-dynamics-236307:3963811")
-    runtimeOnly fg.deobf("curse.maven:cyclops-core-232758:3929867")
-    runtimeOnly fg.deobf("curse.maven:common-capabilities-247007:3929863")
+    runtimeOnly fg.deobf("curse.maven:integrated-dynamics-236307:${intdyn_file}")
+    runtimeOnly fg.deobf("curse.maven:cyclops-core-232758:${cyclops_file}")
+    runtimeOnly fg.deobf("curse.maven:common-capabilities-247007:${common_cap_file}")
 
     //runtimeOnly fg.deobf("curse.maven:-:")
 }

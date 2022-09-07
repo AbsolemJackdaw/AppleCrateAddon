@@ -83,7 +83,7 @@ dependencies {
 
     //mods
     implementation fg.deobf("curse.maven:apple-crates-630726:${apple_crates_file}")
-    runtimeOnly fg.deobf("curse.maven:premium-wood-353515:3905203")
+    runtimeOnly fg.deobf("curse.maven:premium-wood-353515:${premwood_file}")
 
     //runtimeOnly fg.deobf("curse.maven:-:")
 }

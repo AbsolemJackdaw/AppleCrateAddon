@@ -84,8 +84,8 @@ dependencies {
     //mods
     implementation fg.deobf("curse.maven:apple-crates-630726:${apple_crates_file}")
 
-    runtimeOnly fg.deobf("curse.maven:oh-the-biomes-youll-go-247560:3956500")
-    runtimeOnly fg.deobf("curse.maven:terrablender-563928:3966342")
+    runtimeOnly fg.deobf("curse.maven:oh-the-biomes-youll-go-247560:${byg_file}")
+    runtimeOnly fg.deobf("curse.maven:terrablender-563928:${terrablender_file}")
 
 
     //runtimeOnly fg.deobf("curse.maven:-:")
