@@ -12,7 +12,7 @@ modId = "applecrates_premwood" #mandatory
 
 version = "${file.jarVersion}" #mandatory
 
-displayName = "Apple Crates for Bioms o Plenty" #mandatory
+displayName = "Apple Crates for Premium Wood" #mandatory
 
 displayURL = "https://www.curseforge.com/minecraft/mc-mods/apple-crates" #optional
 
@@ -39,6 +39,6 @@ side = "BOTH"
 [[dependencies.applecrates_premwood]]
 modId = "applecrates"
 mandatory = true
-versionRange = "[0.8.0,)"
+versionRange = "[2,)"
 ordering = "NONE"
 side = "SERVER"

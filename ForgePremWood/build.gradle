@@ -61,7 +61,7 @@ minecraft {
         data {
             workingDirectory project.file('run')
             ideaModule "${rootProject.name}.${project.name}.main"
-            args '--mod', mod_id, '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+            args '--mod', "${mod_id}${prem_id}", '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/'), '--existing-mod','applecrates'
             taskName 'Data'
             property 'mixin.env.remapRefMap', 'true'
             property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
@@ -83,6 +83,7 @@ dependencies {
 
     //mods
     implementation fg.deobf("curse.maven:apple-crates-630726:${apple_crates_file}")
+    runtimeOnly fg.deobf("curse.maven:premium-wood-353515:3905203")
 
     //runtimeOnly fg.deobf("curse.maven:-:")
 }

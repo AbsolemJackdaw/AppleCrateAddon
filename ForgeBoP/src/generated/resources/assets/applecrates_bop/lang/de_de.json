@@ -1,5 +1,4 @@
 {
-  "block.applecrates.acacia_crate": "Acacia Crate",
   "block.applecrates.biomesoplenty_cherry_crate": "Cherry Crate",
   "block.applecrates.biomesoplenty_dead_crate": "Dead Crate",
   "block.applecrates.biomesoplenty_fir_crate": "Fir Crate",
@@ -10,16 +9,5 @@
   "block.applecrates.biomesoplenty_palm_crate": "Palm Crate",
   "block.applecrates.biomesoplenty_redwood_crate": "Redwood Crate",
   "block.applecrates.biomesoplenty_umbran_crate": "Umbran Crate",
-  "block.applecrates.biomesoplenty_willow_crate": "Willow Crate",
-  "block.applecrates.birch_crate": "Birch Crate",
-  "block.applecrates.crimson_crate": "Crimson Crate",
-  "block.applecrates.dark_oak_crate": "Dark Oak Crate",
-  "block.applecrates.jungle_crate": "Jungle Crate",
-  "block.applecrates.mangrove_crate": "Mangrove Crate",
-  "block.applecrates.oak_crate": "Oak Crate",
-  "block.applecrates.spruce_crate": "Spruce Crate",
-  "block.applecrates.warped_crate": "Warped Crate",
-  "cannot.switch.trade": "To switch payment item, your green payout slot has to be empty",
-  "container.crate": "Crate",
-  "container.crate.owner": "My Crate Shop"
+  "block.applecrates.biomesoplenty_willow_crate": "Willow Crate"
 }
