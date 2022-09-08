@@ -16,7 +16,7 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 apply plugin: 'org.parchmentmc.librarian.forgegradle'
 
-archivesBaseName = "${fruit}-forge-${addon_version}"
+archivesBaseName = "${fruit}-forge-${minecraft_version}"
 
 minecraft {
     mappings channel: 'official', version: minecraft_version
@@ -119,7 +119,7 @@ publishing {
         mavenJava(MavenPublication) {
             groupId project.group
             artifactId project.archivesBaseName
-            version project.addon_version
+            version project.version
             artifact jar
         }
     }
