@@ -39,6 +39,6 @@ side = "BOTH"
 [[dependencies.applecrates_byg]]
 modId = "applecrates"
 mandatory = true
-versionRange = "[2,)"
+versionRange = "[1.3,)"
 ordering = "NONE"
 side = "BOTH"

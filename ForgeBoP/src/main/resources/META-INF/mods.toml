@@ -39,6 +39,6 @@ side = "BOTH"
 [[dependencies.applecrates_bop]]
 modId = "applecrates"
 mandatory = true
-versionRange = "[2.x,)"
+versionRange = "[1.3,)"
 ordering = "NONE"
 side = "SERVER"

@@ -1,18 +1,18 @@
 {
   "type": "minecraft:crafting_shaped",
   "group": "crates",
-  "key": {
-    "S": {
-      "item": "minecraft:stick"
-    },
-    "p": {
-      "item": "byg:jacaranda_planks"
-    }
-  },
   "pattern": [
     "S S",
     "ppp"
   ],
+  "key": {
+    "p": {
+      "item": "byg:jacaranda_planks"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
   "result": {
     "item": "applecrates:byg_jacaranda_crate"
   }

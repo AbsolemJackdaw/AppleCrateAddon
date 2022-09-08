@@ -61,7 +61,7 @@ minecraft {
         data {
             workingDirectory project.file('run')
             ideaModule "${rootProject.name}.${project.name}.main"
-            args '--mod', mod_id, '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+            args '--mod', "${mod_id}${malum_id}", '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/'), '--existing-mod', 'applecrates'
             taskName 'Data'
             property 'mixin.env.remapRefMap', 'true'
             property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
@@ -82,9 +82,9 @@ dependencies {
     compileOnly project(":Common")
 
     implementation fg.deobf("curse.maven:apple-crates-630726:${apple_crates_file}")
-    runtimeOnly fg.deobf("curse.maven:malum-484064:${malum_file}")
     runtimeOnly fg.deobf("curse.maven:curios-309927:${curios_file}")
     runtimeOnly fg.deobf("curse.maven:lodestone-616457:${lodestone_file}")
+    runtimeOnly fg.deobf("curse.maven:malum-484064:${malum_file}")
 
     //runtimeOnly fg.deobf("curse.maven:-:")
 }

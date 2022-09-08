@@ -1,7 +1,7 @@
 {
   "parent": "applecrates:block/applecrate",
   "textures": {
-    "0": "biomesoplenty:block/redwood_planks",
-    "particle": "biomesoplenty:block/redwood_planks"
+    "particle": "biomesoplenty:block/redwood_planks",
+    "0": "biomesoplenty:block/redwood_planks"
   }
 }

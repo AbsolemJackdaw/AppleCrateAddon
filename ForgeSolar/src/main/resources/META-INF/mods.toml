@@ -8,7 +8,7 @@ issueTrackerURL = "https://github.com/ArtixAllMighty/AppleCrates/issues" #option
 
 [[mods]] #mandatory
 
-modId = "applecrates_solar" #mandatory
+modId = "applecrates_solarforge" #mandatory
 
 version = "${file.jarVersion}" #mandatory
 
@@ -24,21 +24,21 @@ description = '''
 Sell your stuff in fancy crates! support for SolarCraft
 '''
 
-[[dependencies.applecrates_solar]] #optional
+[[dependencies.applecrates_solarforge]] #optional
 modId = "forge" #mandatory
 mandatory = true #mandatory
 versionRange = "[40,)" #mandatory
 ordering = "NONE"
 side = "BOTH"
-[[dependencies.applecrates_solar]]
+[[dependencies.applecrates_solarforge]]
 modId = "minecraft"
 mandatory = true
 versionRange = "[1.18.2,)"
 ordering = "NONE"
 side = "BOTH"
-[[dependencies.applecrates_solar]]
+[[dependencies.applecrates_solarforge]]
 modId = "applecrates"
 mandatory = true
-versionRange = "[2,)"
+versionRange = "[1.3,)"
 ordering = "NONE"
 side = "SERVER"

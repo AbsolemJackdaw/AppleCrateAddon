@@ -1,9 +1,5 @@
 {
   "variants": {
-    "facing=east": {
-      "model": "applecrates:block/biomesoplenty_dead_crate",
-      "y": 90
-    },
     "facing=north": {
       "model": "applecrates:block/biomesoplenty_dead_crate"
     },
@@ -14,6 +10,10 @@
     "facing=west": {
       "model": "applecrates:block/biomesoplenty_dead_crate",
       "y": 270
+    },
+    "facing=east": {
+      "model": "applecrates:block/biomesoplenty_dead_crate",
+      "y": 90
     }
   }
 }
