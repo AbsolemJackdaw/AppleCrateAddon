@@ -1,3 +1,5 @@
+import net.darkhax.curseforgegradle.TaskPublishCurseForge
+
 buildscript {
     repositories {
         maven { url = 'https://maven.minecraftforge.net' }
@@ -9,6 +11,9 @@ buildscript {
         classpath 'org.parchmentmc:librarian:1.+'
 
     }
+}
+plugins {
+    id 'net.darkhax.curseforgegradle' version '1.0.11'
 }
 apply plugin: 'java'
 apply plugin: 'net.minecraftforge.gradle'
@@ -61,7 +66,7 @@ minecraft {
         data {
             workingDirectory project.file('run')
             ideaModule "${rootProject.name}.${project.name}.main"
-            args '--mod', "${mod_id}${tcon_id}", '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/') , '--existing-mod','applecrates'
+            args '--mod', "${mod_id}${tcon_id}", '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/'), '--existing-mod', 'applecrates'
             taskName 'Data'
             property 'mixin.env.remapRefMap', 'true'
             property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
@@ -129,4 +134,17 @@ publishing {
             url "file://" + System.getenv("local_maven")
         }
     }
+}
+task publishCurseForge(type: TaskPublishCurseForge) {
+
+    apiToken = "${api_token_paintings}"
+
+    // The main file to upload
+    def mainFile = upload(670643, jar)
+    mainFile.releaseType = 'release'
+    mainFile.changelog = "${changelog}"
+    mainFile.changelogType = 'markdown'
+    mainFile.addJavaVersion('Java 17')
+    mainFile.addRequirement('apple-crates')
+    mainFile.addRequirement('tinkers-construct')
 }
