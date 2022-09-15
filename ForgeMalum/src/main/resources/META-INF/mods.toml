@@ -16,7 +16,7 @@ displayName = "Apple Crates for Malum" #mandatory
 
 displayURL = "https://www.curseforge.com/minecraft/mc-mods/apple-crates" #optional
 
-logoFile = "../../../../../Common/src/main/resources/icon.png" #optional
+logoFile= "logo.png" #optional
 
 authors = "Absolem Jackdaw" #optional
 
