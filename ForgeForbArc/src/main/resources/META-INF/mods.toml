@@ -28,17 +28,17 @@ Sell your stuff in fancy crates! support for Forbidden Arcanus
 modId = "forge" #mandatory
 mandatory = true #mandatory
 versionRange = "[43,)" #mandatory
-ordering = "NONE"
+ordering="AFTER"
 side = "BOTH"
 [[dependencies.applecrates_forbarc]]
 modId = "minecraft"
 mandatory = true
 versionRange = "[1.19.2,)"
-ordering = "NONE"
+ordering="AFTER"
 side = "BOTH"
 [[dependencies.applecrates_forbarc]]
 modId = "applecrates"
 mandatory = true
 versionRange = "[2,)"
-ordering = "NONE"
+ordering="AFTER"
 side = "SERVER"
