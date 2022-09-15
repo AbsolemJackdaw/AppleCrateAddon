@@ -27,13 +27,13 @@ Sell your stuff in fancy crates! support for Biomes o Plenty
 [[dependencies.applecrates_byg]] #optional
 modId = "forge" #mandatory
 mandatory = true #mandatory
-versionRange = "[40,)" #mandatory
+versionRange = "[43,)" #mandatory
 ordering="AFTER"
 side = "BOTH"
 [[dependencies.applecrates_byg]]
 modId = "minecraft"
 mandatory = true
-versionRange = "[1.18.2,)"
+versionRange = "[1.19.2,)"
 ordering="AFTER"
 side = "BOTH"
 [[dependencies.applecrates_byg]]
