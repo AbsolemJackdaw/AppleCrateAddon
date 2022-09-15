@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "applecrates:integrateddynamics_menril_crate",
+      "required": false
+    }
+  ]
+}

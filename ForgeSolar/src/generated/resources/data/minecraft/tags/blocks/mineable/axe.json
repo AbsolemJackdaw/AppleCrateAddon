@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "applecrates:solarforge_radiant_crate",
+      "required": false
+    },
+    {
+      "id": "applecrates:solarforge_runic_crate",
+      "required": false
+    }
+  ]
+}
