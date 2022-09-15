@@ -17,7 +17,7 @@ include("Common")
 include 'ForgeBoP'
 include 'ForgeBotania'
 include 'ForgeByG'
-include 'ForgeForbArc'
+//include 'ForgeForbArc'
 include 'ForgeFruit'
 include 'ForgeIntegratedDynamics'
 include 'ForgeMalum'
