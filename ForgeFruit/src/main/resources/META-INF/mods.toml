@@ -39,6 +39,12 @@ side = "BOTH"
 [[dependencies.applecrates_fruit]]
 modId = "applecrates"
 mandatory = true
-versionRange = "[1.3,)"
+versionRange = "[1.6,)"
 ordering="AFTER"
 side = "SERVER"
+[[dependencies.applecrates_fruit]]
+modId = "fruittrees"
+mandatory = true
+versionRange = "[0,)"
+ordering="AFTER"
+side = "BOTH"

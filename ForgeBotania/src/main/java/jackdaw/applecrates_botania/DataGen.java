@@ -1,6 +1,6 @@
 package jackdaw.applecrates_botania;
 
-import jackdaw.applecrates.datagen.DataGenerators;
+import jackdaw.applecrates.api.DataGenerators;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;

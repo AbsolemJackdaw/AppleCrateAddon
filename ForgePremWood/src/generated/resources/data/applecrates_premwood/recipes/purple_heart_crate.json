@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "s s",
+    "ppp"
+  ],
+  "key": {
+    "p": {
+      "item": "premium_wood:purple_heart_planks"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "applecrates_premwood:purple_heart_crate"
+  }
+}

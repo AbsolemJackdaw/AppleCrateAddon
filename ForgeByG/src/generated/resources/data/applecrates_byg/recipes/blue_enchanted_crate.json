@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "s s",
+    "ppp"
+  ],
+  "key": {
+    "p": {
+      "item": "byg:blue_enchanted_planks"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "applecrates_byg:blue_enchanted_crate"
+  }
+}

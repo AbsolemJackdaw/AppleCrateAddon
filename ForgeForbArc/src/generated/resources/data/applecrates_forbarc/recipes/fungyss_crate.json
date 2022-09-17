@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "s s",
+    "ppp"
+  ],
+  "key": {
+    "p": {
+      "item": "forbidden_arcanus:fungyss_planks"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "applecrates_forbarc:fungyss_crate"
+  }
+}

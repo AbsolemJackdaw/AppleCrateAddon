@@ -2,11 +2,11 @@
   "replace": false,
   "values": [
     {
-      "id": "applecrates:malum_soulwood_crate",
+      "id": "applecrates_malum:runewood_crate",
       "required": false
     },
     {
-      "id": "applecrates:malum_runewood_crate",
+      "id": "applecrates_malum:soulwood_crate",
       "required": false
     }
   ]

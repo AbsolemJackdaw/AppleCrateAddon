@@ -2,11 +2,11 @@
   "replace": false,
   "values": [
     {
-      "id": "applecrates:fruittrees_cherry_crate",
+      "id": "applecrates_fruit:cherry_crate",
       "required": false
     },
     {
-      "id": "applecrates:fruittrees_citrus_crate",
+      "id": "applecrates_fruit:citrus_crate",
       "required": false
     }
   ]

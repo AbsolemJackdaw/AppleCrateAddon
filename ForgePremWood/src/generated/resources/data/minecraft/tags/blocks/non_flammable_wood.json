@@ -2,27 +2,27 @@
   "replace": false,
   "values": [
     {
-      "id": "applecrates:premium_wood_magic_crate",
+      "id": "applecrates_premwood:magic_crate",
       "required": false
     },
     {
-      "id": "applecrates:premium_wood_purple_heart_crate",
+      "id": "applecrates_premwood:maple_crate",
       "required": false
     },
     {
-      "id": "applecrates:premium_wood_silverbell_crate",
+      "id": "applecrates_premwood:purple_heart_crate",
       "required": false
     },
     {
-      "id": "applecrates:premium_wood_maple_crate",
+      "id": "applecrates_premwood:silverbell_crate",
       "required": false
     },
     {
-      "id": "applecrates:premium_wood_tiger_crate",
+      "id": "applecrates_premwood:tiger_crate",
       "required": false
     },
     {
-      "id": "applecrates:premium_wood_willow_crate",
+      "id": "applecrates_premwood:willow_crate",
       "required": false
     }
   ]

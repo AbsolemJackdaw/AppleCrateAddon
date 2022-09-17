@@ -2,23 +2,23 @@
   "replace": false,
   "values": [
     {
-      "id": "applecrates:botania_mossy_livingwood_crate",
+      "id": "applecrates_botania:dreamwood_crate",
       "required": false
     },
     {
-      "id": "applecrates:botania_shimmerwood_crate",
+      "id": "applecrates_botania:livingwood_crate",
       "required": false
     },
     {
-      "id": "applecrates:botania_livingwood_crate",
+      "id": "applecrates_botania:shimmerwood_crate",
       "required": false
     },
     {
-      "id": "applecrates:botania_mossy_dreamwood_crate",
+      "id": "applecrates_botania:mossy_dreamwood_crate",
       "required": false
     },
     {
-      "id": "applecrates:botania_dreamwood_crate",
+      "id": "applecrates_botania:mossy_livingwood_crate",
       "required": false
     }
   ]

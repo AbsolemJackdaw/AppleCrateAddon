@@ -2,19 +2,19 @@
   "replace": false,
   "values": [
     {
-      "id": "applecrates:tconstruct_greenheart_crate",
+      "id": "applecrates_tcon:nahuatl_crate",
       "required": false
     },
     {
-      "id": "applecrates:tconstruct_nahuatl_crate",
+      "id": "applecrates_tcon:greenheart_crate",
       "required": false
     },
     {
-      "id": "applecrates:tconstruct_skyroot_crate",
+      "id": "applecrates_tcon:skyroot_crate",
       "required": false
     },
     {
-      "id": "applecrates:tconstruct_bloodshroom_crate",
+      "id": "applecrates_tcon:bloodshroom_crate",
       "required": false
     }
   ]

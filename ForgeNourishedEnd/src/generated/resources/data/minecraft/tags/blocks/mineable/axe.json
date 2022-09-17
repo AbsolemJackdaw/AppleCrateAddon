@@ -2,15 +2,15 @@
   "replace": false,
   "values": [
     {
-      "id": "applecrates:nourished_end_seldge_crate",
+      "id": "applecrates_nourishedend:cerulean_crate",
       "required": false
     },
     {
-      "id": "applecrates:nourished_end_verdant_crate",
+      "id": "applecrates_nourishedend:seldge_crate",
       "required": false
     },
     {
-      "id": "applecrates:nourished_end_cerulean_crate",
+      "id": "applecrates_nourishedend:verdant_crate",
       "required": false
     }
   ]

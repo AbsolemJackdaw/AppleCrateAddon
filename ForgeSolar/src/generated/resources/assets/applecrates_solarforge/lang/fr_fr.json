@@ -1,4 +1,4 @@
 {
-  "block.applecrates.solarforge_radiant_crate": "Radiant Crate",
-  "block.applecrates.solarforge_runic_crate": "Runic Crate"
+  "block.applecrates_solarforge.radiant_crate": "Radiant Crate",
+  "block.applecrates_solarforge.runic_crate": "Runic Crate"
 }

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "applecrates_byg:block/rainbow_eucalyptus_crate"
+    },
+    "facing=south": {
+      "model": "applecrates_byg:block/rainbow_eucalyptus_crate",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "applecrates_byg:block/rainbow_eucalyptus_crate",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "applecrates_byg:block/rainbow_eucalyptus_crate",
+      "y": 90
+    }
+  }
+}

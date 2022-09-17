@@ -2,7 +2,7 @@
   "replace": false,
   "values": [
     {
-      "id": "applecrates:integrateddynamics_menril_crate",
+      "id": "applecrates_intdyn:menril_crate",
       "required": false
     }
   ]

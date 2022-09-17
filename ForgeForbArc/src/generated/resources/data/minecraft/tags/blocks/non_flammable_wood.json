@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "applecrates_forbarc:cherrywood_crate",
+      "required": false
+    },
+    {
+      "id": "applecrates_forbarc:edelwood_crate",
+      "required": false
+    },
+    {
+      "id": "applecrates_forbarc:fungyss_crate",
+      "required": false
+    },
+    {
+      "id": "applecrates_forbarc:mysterywood_crate",
+      "required": false
+    }
+  ]
+}
