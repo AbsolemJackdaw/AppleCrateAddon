@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "s s",
+    "ppp"
+  ],
+  "key": {
+    "p": {
+      "item": "fruittrees:cherry_planks"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "applecrates_fruit:cherry_crate"
+  }
+}
