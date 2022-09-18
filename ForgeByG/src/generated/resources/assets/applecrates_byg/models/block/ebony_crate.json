@@ -1,7 +1,7 @@
 {
   "parent": "applecrates:block/applecrate",
   "textures": {
-    "particle": "byg:block/ebony/planks",
-    "0": "byg:block/ebony/planks"
+    "0": "byg:block/ebony/planks",
+    "particle": "byg:block/ebony/planks"
   }
 }

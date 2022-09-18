@@ -1,7 +1,7 @@
 {
   "parent": "applecrates:block/applecrate",
   "textures": {
-    "particle": "byg:block/nightshade/planks",
-    "0": "byg:block/nightshade/planks"
+    "0": "byg:block/nightshade/planks",
+    "particle": "byg:block/nightshade/planks"
   }
 }

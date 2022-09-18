@@ -1,9 +1,9 @@
 package jackdaw.applecrates_forbarc;
 
 import jackdaw.applecrates.api.DataGenerators;
+import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 
 @Mod.EventBusSubscriber(modid = ArcanusCrates.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class DataGen {

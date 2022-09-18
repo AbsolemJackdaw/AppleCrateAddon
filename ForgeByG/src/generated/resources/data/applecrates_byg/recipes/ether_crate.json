@@ -1,9 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "s s",
-    "ppp"
-  ],
   "key": {
     "p": {
       "item": "byg:ether_planks"
@@ -12,6 +8,10 @@
       "item": "minecraft:stick"
     }
   },
+  "pattern": [
+    "s s",
+    "ppp"
+  ],
   "result": {
     "item": "applecrates_byg:ether_crate"
   }

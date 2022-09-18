@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "p": {
-      "item": "premium_wood:willow_planks"
+      "item": "byg:white_mangrove_planks"
     },
     "s": {
       "item": "minecraft:stick"
@@ -13,6 +13,6 @@
     "ppp"
   ],
   "result": {
-    "item": "applecrates_premwood:willow_crate"
+    "item": "applecrates_byg:white_mangrove_crate"
   }
 }
