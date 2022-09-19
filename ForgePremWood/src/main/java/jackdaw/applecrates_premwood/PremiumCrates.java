@@ -25,15 +25,15 @@ public class PremiumCrates {
         ITEMS.register(bus);
         BLOCK_ENTITY_TYPES.register(bus);
 
+        String[] names = new String[]{
+                "magic", "maple", "purple_heart", "silverbell", "tiger", "willow"
+        };
         String premium_wood = "premium_wood";
-        new AppleCrateAPI.AppleCrateBuilder(premium_wood, "magic").withSubfolder("magic/").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(premium_wood, "maple").withSubfolder("maple/").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(premium_wood, "purple_heart").withSubfolder("purple_heart/").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(premium_wood, "silverbell").withSubfolder("silverbell/").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(premium_wood, "tiger").withSubfolder("tiger/").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(premium_wood, "willow").withSubfolder("willow/").register(MODID);
 
-        GeneralRegistry.prepareForRegistry(premium_wood, BLOCKS, ITEMS, BLOCK_ENTITY_TYPES);
+        for (String wood : names)
+            new AppleCrateAPI.AppleCrateBuilder(premium_wood, MODID, wood).withSubfolder(wood + "/").register();
+
+        GeneralRegistry.prepareForRegistry(MODID, BLOCKS, ITEMS, BLOCK_ENTITY_TYPES);
 
     }
 }

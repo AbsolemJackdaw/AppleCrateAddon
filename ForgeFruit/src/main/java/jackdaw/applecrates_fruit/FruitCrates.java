@@ -26,10 +26,10 @@ public class FruitCrates {
 
 
         String fruitTreesModId = "fruittrees";
-        new AppleCrateAPI.AppleCrateBuilder(fruitTreesModId, "cherry").withSubfolder("fruittrees/").textureInMinecraftDirectory().register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(fruitTreesModId, "citrus").withSubfolder("fruittrees/").withTextureName("planks").withSuffix("").textureInMinecraftDirectory().register(MODID); //citrus wood is called plank...
+        new AppleCrateAPI.AppleCrateBuilder(fruitTreesModId, MODID, "cherry").withSubfolder("fruittrees/").textureInMinecraftDirectory().withBlock("cherry_planks").register();
+        new AppleCrateAPI.AppleCrateBuilder(fruitTreesModId, MODID, "citrus").withSubfolder("fruittrees/").withTextureName("planks").withSuffix("").textureInMinecraftDirectory().withBlock("citrus_planks").register(); //citrus wood is called plank...
 
-        GeneralRegistry.prepareForRegistry(fruitTreesModId, BLOCKS, ITEMS, BLOCK_ENTITY_TYPES);
+        GeneralRegistry.prepareForRegistry(MODID, BLOCKS, ITEMS, BLOCK_ENTITY_TYPES);
 
     }
 }

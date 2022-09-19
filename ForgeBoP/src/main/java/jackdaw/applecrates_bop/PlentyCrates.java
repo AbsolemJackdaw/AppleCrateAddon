@@ -25,20 +25,15 @@ public class PlentyCrates {
         ITEMS.register(bus);
         BLOCK_ENTITY_TYPES.register(bus);
 
-        String biomesoplenty = "biomesoplenty";
-        new AppleCrateAPI.AppleCrateBuilder(biomesoplenty, "cherry").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(biomesoplenty, "dead").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(biomesoplenty, "fir").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(biomesoplenty, "hellbark").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(biomesoplenty, "jacaranda").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(biomesoplenty, "magic").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(biomesoplenty, "mahogany").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(biomesoplenty, "palm").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(biomesoplenty, "redwood").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(biomesoplenty, "umbran").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(biomesoplenty, "willow").register(MODID);
+        String[] names = new String[]{
+                "cherry", "dead", "fir", "hellbark", "jacaranda", "magic", "mahogany", "palm", "redwood", "umbran", "willow"
+        };
 
-        GeneralRegistry.prepareForRegistry(biomesoplenty, BLOCKS, ITEMS, BLOCK_ENTITY_TYPES);
+        String biomesoplenty = "biomesoplenty";
+        for (String wood : names)
+            new AppleCrateAPI.AppleCrateBuilder(biomesoplenty, MODID, wood).register();
+
+        GeneralRegistry.prepareForRegistry(MODID, BLOCKS, ITEMS, BLOCK_ENTITY_TYPES);
 
     }
 

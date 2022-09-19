@@ -23,14 +23,14 @@ public class ArcanusCrates {
         BLOCKS.register(bus);
         ITEMS.register(bus);
         BLOCK_ENTITY_TYPES.register(bus);
-
+        String[] names = new String[]{
+                "cherrywood", "edelwood", "fungyss", "mysterywood"
+        };
         String forbidden_arcanus = "forbidden_arcanus";
-        new AppleCrateAPI.AppleCrateBuilder(forbidden_arcanus, "cherrywood").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(forbidden_arcanus, "edelwood").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(forbidden_arcanus, "fungyss").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(forbidden_arcanus, "mysterywood").register(MODID);
+        for (String wood : names)
+            new AppleCrateAPI.AppleCrateBuilder(forbidden_arcanus, MODID, wood).register();
 
-        GeneralRegistry.prepareForRegistry(forbidden_arcanus, BLOCKS, ITEMS, BLOCK_ENTITY_TYPES);
+        GeneralRegistry.prepareForRegistry(MODID, BLOCKS, ITEMS, BLOCK_ENTITY_TYPES);
 
     }
 }
