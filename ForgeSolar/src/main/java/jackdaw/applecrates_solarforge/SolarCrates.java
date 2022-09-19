@@ -26,10 +26,10 @@ public class SolarCrates {
         BLOCK_ENTITY_TYPES.register(bus);
 
         String solarforgeModId = "solarforge";
-        new AppleCrateAPI.AppleCrateBuilder(solarforgeModId, "radiant").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(solarforgeModId, "runic").register(MODID);
+        new AppleCrateAPI.AppleCrateBuilder(solarforgeModId, MODID, "radiant").register();
+        new AppleCrateAPI.AppleCrateBuilder(solarforgeModId, MODID, "runic").register();
 
-        GeneralRegistry.prepareForRegistry(solarforgeModId, BLOCKS, ITEMS, BLOCK_ENTITY_TYPES);
+        GeneralRegistry.prepareForRegistry(MODID, BLOCKS, ITEMS, BLOCK_ENTITY_TYPES);
 
     }
 }

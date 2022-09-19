@@ -24,12 +24,12 @@ public class BotaniaCrates {
         BLOCK_ENTITY_TYPES.register(bus);
 
         String botaniaModId = "botania";
-        new AppleCrateAPI.AppleCrateBuilder(botaniaModId, "dreamwood").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(botaniaModId, "livingwood").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(botaniaModId, "shimmerwood").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(botaniaModId, "mossy_dreamwood").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(botaniaModId, "mossy_livingwood").register(MODID);
-        GeneralRegistry.prepareForRegistry(botaniaModId, BLOCKS, ITEMS, BLOCK_ENTITY_TYPES);
+        new AppleCrateAPI.AppleCrateBuilder(botaniaModId, MODID, "dreamwood").register();
+        new AppleCrateAPI.AppleCrateBuilder(botaniaModId, MODID, "livingwood").register();
+        new AppleCrateAPI.AppleCrateBuilder(botaniaModId, MODID, "shimmerwood").register();
+        new AppleCrateAPI.AppleCrateBuilder(botaniaModId, MODID, "mossy_dreamwood").register();
+        new AppleCrateAPI.AppleCrateBuilder(botaniaModId, MODID, "mossy_livingwood").register();
+        GeneralRegistry.prepareForRegistry(MODID, BLOCKS, ITEMS, BLOCK_ENTITY_TYPES);
 
     }
 }

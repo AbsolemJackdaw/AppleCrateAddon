@@ -26,14 +26,14 @@ public class PremiumCrates {
         BLOCK_ENTITY_TYPES.register(bus);
 
         String premium_wood = "premium_wood";
-        new AppleCrateAPI.AppleCrateBuilder(premium_wood, "magic").withSubfolder("magic/").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(premium_wood, "maple").withSubfolder("maple/").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(premium_wood, "purple_heart").withSubfolder("purple_heart/").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(premium_wood, "silverbell").withSubfolder("silverbell/").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(premium_wood, "tiger").withSubfolder("tiger/").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(premium_wood, "willow").withSubfolder("willow/").register(MODID);
+        new AppleCrateAPI.AppleCrateBuilder(premium_wood, MODID, "magic").withSubfolder("magic/").register();
+        new AppleCrateAPI.AppleCrateBuilder(premium_wood, MODID, "maple").withSubfolder("maple/").register();
+        new AppleCrateAPI.AppleCrateBuilder(premium_wood, MODID, "purple_heart").withSubfolder("purple_heart/").register();
+        new AppleCrateAPI.AppleCrateBuilder(premium_wood, MODID, "silverbell").withSubfolder("silverbell/").register();
+        new AppleCrateAPI.AppleCrateBuilder(premium_wood, MODID, "tiger").withSubfolder("tiger/").register();
+        new AppleCrateAPI.AppleCrateBuilder(premium_wood, MODID, "willow").withSubfolder("willow/").register();
 
-        GeneralRegistry.prepareForRegistry(premium_wood, BLOCKS, ITEMS, BLOCK_ENTITY_TYPES);
+        GeneralRegistry.prepareForRegistry(MODID, BLOCKS, ITEMS, BLOCK_ENTITY_TYPES);
 
     }
 }

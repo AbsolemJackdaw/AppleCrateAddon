@@ -26,19 +26,19 @@ public class PlentyCrates {
         BLOCK_ENTITY_TYPES.register(bus);
 
         String biomesoplenty = "biomesoplenty";
-        new AppleCrateAPI.AppleCrateBuilder(biomesoplenty, "cherry").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(biomesoplenty, "dead").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(biomesoplenty, "fir").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(biomesoplenty, "hellbark").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(biomesoplenty, "jacaranda").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(biomesoplenty, "magic").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(biomesoplenty, "mahogany").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(biomesoplenty, "palm").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(biomesoplenty, "redwood").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(biomesoplenty, "umbran").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(biomesoplenty, "willow").register(MODID);
+        new AppleCrateAPI.AppleCrateBuilder(biomesoplenty, MODID, "cherry").register();
+        new AppleCrateAPI.AppleCrateBuilder(biomesoplenty, MODID, "dead").register();
+        new AppleCrateAPI.AppleCrateBuilder(biomesoplenty, MODID, "fir").register();
+        new AppleCrateAPI.AppleCrateBuilder(biomesoplenty, MODID, "hellbark").register();
+        new AppleCrateAPI.AppleCrateBuilder(biomesoplenty, MODID, "jacaranda").register();
+        new AppleCrateAPI.AppleCrateBuilder(biomesoplenty, MODID, "magic").register();
+        new AppleCrateAPI.AppleCrateBuilder(biomesoplenty, MODID, "mahogany").register();
+        new AppleCrateAPI.AppleCrateBuilder(biomesoplenty, MODID, "palm").register();
+        new AppleCrateAPI.AppleCrateBuilder(biomesoplenty, MODID, "redwood").register();
+        new AppleCrateAPI.AppleCrateBuilder(biomesoplenty, MODID, "umbran").register();
+        new AppleCrateAPI.AppleCrateBuilder(biomesoplenty, MODID, "willow").register();
 
-        GeneralRegistry.prepareForRegistry(biomesoplenty, BLOCKS, ITEMS, BLOCK_ENTITY_TYPES);
+        GeneralRegistry.prepareForRegistry(MODID, BLOCKS, ITEMS, BLOCK_ENTITY_TYPES);
 
     }
 

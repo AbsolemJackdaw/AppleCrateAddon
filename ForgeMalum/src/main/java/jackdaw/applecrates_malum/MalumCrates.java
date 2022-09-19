@@ -25,9 +25,9 @@ public class MalumCrates {
         BLOCK_ENTITY_TYPES.register(bus);
 
         String malum = "malum";
-        new AppleCrateAPI.AppleCrateBuilder(malum, "runewood").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(malum, "soulwood").register(MODID);
-        GeneralRegistry.prepareForRegistry(malum, BLOCKS, ITEMS, BLOCK_ENTITY_TYPES);
+        new AppleCrateAPI.AppleCrateBuilder(malum, MODID, "runewood").register();
+        new AppleCrateAPI.AppleCrateBuilder(malum, MODID, "soulwood").register();
+        GeneralRegistry.prepareForRegistry(MODID, BLOCKS, ITEMS, BLOCK_ENTITY_TYPES);
 
     }
 }

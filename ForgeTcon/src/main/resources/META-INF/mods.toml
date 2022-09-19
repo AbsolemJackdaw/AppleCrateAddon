@@ -28,23 +28,23 @@ Sell your stuff in fancy crates! support for Tinker's Construct
 modId = "forge" #mandatory
 mandatory = true #mandatory
 versionRange = "[40,)" #mandatory
-ordering="AFTER"
+ordering="[1.7,)"
 side = "BOTH"
 [[dependencies.applecrates_tcon]]
 modId = "minecraft"
 mandatory = true
 versionRange = "[1.18.2,)"
-ordering="AFTER"
+ordering="[1.7,)"
 side = "BOTH"
 [[dependencies.applecrates_tcon]]
 modId = "applecrates"
 mandatory = true
-versionRange = "[1.6,)"
-ordering="AFTER"
+versionRange = "[1.7,)"
+ordering="[1.7,)"
 side = "SERVER"
 [[dependencies.applecrates_tcon]]
 modId = "tconstruct"
 mandatory = true
 versionRange = "[0,)"
-ordering="AFTER"
+ordering="[1.7,)"
 side = "BOTH"

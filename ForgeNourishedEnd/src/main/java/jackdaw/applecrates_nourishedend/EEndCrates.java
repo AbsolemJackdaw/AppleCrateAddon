@@ -24,11 +24,11 @@ public class EEndCrates {
         BLOCK_ENTITY_TYPES.register(bus);
 
         String nourished_end = "nourished_end";
-        new AppleCrateAPI.AppleCrateBuilder(nourished_end, "cerulean").withParentFolder("blocks/").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(nourished_end, "seldge").withParentFolder("blocks/").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(nourished_end, "verdant").withParentFolder("blocks/").register(MODID);
+        new AppleCrateAPI.AppleCrateBuilder(nourished_end, MODID, "cerulean").withParentFolder("blocks/").register();
+        new AppleCrateAPI.AppleCrateBuilder(nourished_end, MODID, "seldge").withParentFolder("blocks/").register();
+        new AppleCrateAPI.AppleCrateBuilder(nourished_end, MODID, "verdant").withParentFolder("blocks/").register();
 
-        GeneralRegistry.prepareForRegistry(nourished_end, BLOCKS, ITEMS, BLOCK_ENTITY_TYPES);
+        GeneralRegistry.prepareForRegistry(MODID, BLOCKS, ITEMS, BLOCK_ENTITY_TYPES);
 
     }
 }

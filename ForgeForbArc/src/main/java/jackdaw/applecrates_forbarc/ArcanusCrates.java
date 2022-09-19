@@ -25,12 +25,12 @@ public class ArcanusCrates {
         BLOCK_ENTITY_TYPES.register(bus);
 
         String forbidden_arcanus = "forbidden_arcanus";
-        new AppleCrateAPI.AppleCrateBuilder(forbidden_arcanus, "cherrywood").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(forbidden_arcanus, "edelwood").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(forbidden_arcanus, "fungyss").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(forbidden_arcanus, "mysterywood").register(MODID);
+        new AppleCrateAPI.AppleCrateBuilder(forbidden_arcanus, MODID, "cherrywood").register();
+        new AppleCrateAPI.AppleCrateBuilder(forbidden_arcanus, MODID, "edelwood").register();
+        new AppleCrateAPI.AppleCrateBuilder(forbidden_arcanus, MODID, "fungyss").register();
+        new AppleCrateAPI.AppleCrateBuilder(forbidden_arcanus, MODID, "mysterywood").register();
 
-        GeneralRegistry.prepareForRegistry(forbidden_arcanus, BLOCKS, ITEMS, BLOCK_ENTITY_TYPES);
+        GeneralRegistry.prepareForRegistry(MODID, BLOCKS, ITEMS, BLOCK_ENTITY_TYPES);
 
     }
 }

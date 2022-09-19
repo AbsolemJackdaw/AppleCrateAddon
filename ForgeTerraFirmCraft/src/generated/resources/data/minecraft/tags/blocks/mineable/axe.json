@@ -1,0 +1,77 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "applecrates_tfc:acacia_crate",
+      "required": false
+    },
+    {
+      "id": "applecrates_tfc:aspen_crate",
+      "required": false
+    },
+    {
+      "id": "applecrates_tfc:birch_crate",
+      "required": false
+    },
+    {
+      "id": "applecrates_tfc:blackwood_crate",
+      "required": false
+    },
+    {
+      "id": "applecrates_tfc:chestnut_crate",
+      "required": false
+    },
+    {
+      "id": "applecrates_tfc:douglas_fir_crate",
+      "required": false
+    },
+    {
+      "id": "applecrates_tfc:hickory_crate",
+      "required": false
+    },
+    {
+      "id": "applecrates_tfc:kapok_crate",
+      "required": false
+    },
+    {
+      "id": "applecrates_tfc:maple_crate",
+      "required": false
+    },
+    {
+      "id": "applecrates_tfc:oak_crate",
+      "required": false
+    },
+    {
+      "id": "applecrates_tfc:palm_crate",
+      "required": false
+    },
+    {
+      "id": "applecrates_tfc:pine_crate",
+      "required": false
+    },
+    {
+      "id": "applecrates_tfc:rosewood_crate",
+      "required": false
+    },
+    {
+      "id": "applecrates_tfc:sequoia_crate",
+      "required": false
+    },
+    {
+      "id": "applecrates_tfc:spruce_crate",
+      "required": false
+    },
+    {
+      "id": "applecrates_tfc:sycamore_crate",
+      "required": false
+    },
+    {
+      "id": "applecrates_tfc:white_cedar_crate",
+      "required": false
+    },
+    {
+      "id": "applecrates_tfc:willow_crate",
+      "required": false
+    }
+  ]
+}

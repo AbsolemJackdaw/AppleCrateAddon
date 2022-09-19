@@ -24,9 +24,9 @@ public class DynamicCrates {
         BLOCK_ENTITY_TYPES.register(bus);
 
         String integratedDynamicsModId = "integrateddynamics";
-        new AppleCrateAPI.AppleCrateBuilder(integratedDynamicsModId, "menril").register(MODID);
+        new AppleCrateAPI.AppleCrateBuilder(integratedDynamicsModId, MODID, "menril").register();
 
-        GeneralRegistry.prepareForRegistry(integratedDynamicsModId, BLOCKS, ITEMS, BLOCK_ENTITY_TYPES);
+        GeneralRegistry.prepareForRegistry(MODID, BLOCKS, ITEMS, BLOCK_ENTITY_TYPES);
 
     }
 }

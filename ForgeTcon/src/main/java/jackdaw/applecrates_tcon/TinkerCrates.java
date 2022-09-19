@@ -26,12 +26,12 @@ public class TinkerCrates {
         BLOCK_ENTITY_TYPES.register(bus);
 
         String tinkersconstructmodid = "tconstruct";
-        new AppleCrateAPI.AppleCrateBuilder(tinkersconstructmodid, "nahuatl").withSubfolder("wood/").withSuffix("").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(tinkersconstructmodid, "greenheart").withTextureName("planks").withSuffix("").withSubfolder("wood/greenheart/").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(tinkersconstructmodid, "skyroot").withTextureName("planks").withSuffix("").withSubfolder("wood/skyroot/").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(tinkersconstructmodid, "bloodshroom").withTextureName("planks").withSuffix("").withSubfolder("wood/bloodshroom/").register(MODID);
+        new AppleCrateAPI.AppleCrateBuilder(tinkersconstructmodid, MODID, "nahuatl").withSubfolder("wood/").withSuffix("").register();
+        new AppleCrateAPI.AppleCrateBuilder(tinkersconstructmodid, MODID, "greenheart").withTextureName("planks").withSuffix("").withSubfolder("wood/greenheart/").register();
+        new AppleCrateAPI.AppleCrateBuilder(tinkersconstructmodid, MODID, "skyroot").withTextureName("planks").withSuffix("").withSubfolder("wood/skyroot/").register();
+        new AppleCrateAPI.AppleCrateBuilder(tinkersconstructmodid, MODID, "bloodshroom").withTextureName("planks").withSuffix("").withSubfolder("wood/bloodshroom/").register();
 
-        GeneralRegistry.prepareForRegistry(tinkersconstructmodid, BLOCKS, ITEMS, BLOCK_ENTITY_TYPES);
+        GeneralRegistry.prepareForRegistry(MODID, BLOCKS, ITEMS, BLOCK_ENTITY_TYPES);
 
     }
 }

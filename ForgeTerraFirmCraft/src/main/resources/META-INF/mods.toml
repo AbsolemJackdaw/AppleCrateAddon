@@ -1,0 +1,50 @@
+modLoader = "javafml" #mandatory
+
+loaderVersion = "[40,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
+
+license = "gnu v3"
+
+issueTrackerURL = "https://github.com/ArtixAllMighty/AppleCrates/issues" #optional
+
+[[mods]] #mandatory
+
+modId = "applecrates_tfc" #mandatory
+
+version = "${file.jarVersion}" #mandatory
+
+displayName = "Apple Crates for Premium Wood" #mandatory
+
+displayURL = "https://www.curseforge.com/minecraft/mc-mods/apple-crates" #optional
+
+logoFile = "logo.png" #optional
+
+authors = "Absolem Jackdaw" #optional
+
+description = '''
+Sell your stuff in fancy crates! support for Premium Wood
+'''
+
+[[dependencies.applecrates_tfc]] #optional
+modId = "forge" #mandatory
+mandatory = true #mandatory
+versionRange = "[40,)" #mandatory
+ordering = "AFTER"
+side = "BOTH"
+[[dependencies.applecrates_tfc]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.18.2,)"
+ordering = "AFTER"
+side = "BOTH"
+[[dependencies.applecrates_tfc]]
+modId = "applecrates"
+mandatory = true
+versionRange = "[1.7,)"
+ordering = "AFTER"
+side = "SERVER"
+[[dependencies.applecrates_tfc]]
+modId = "tfc"
+mandatory = true
+versionRange = "[0,)"
+ordering = "AFTER"
+side = "BOTH"

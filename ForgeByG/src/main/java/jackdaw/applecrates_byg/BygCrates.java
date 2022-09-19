@@ -27,9 +27,9 @@ public class BygCrates {
                 "holly", "imparius", "jacaranda", "lament", "mahogany", "white_mangrove", "maple", "nightshade", "palm", "pine", "rainbow_eucalyptus",
                 "redwood", "skyris", "sythian", "willow", "witch_hazel", "zelkova"};
         for (String woodName : bygWoods)
-            new AppleCrateAPI.AppleCrateBuilder(bygModId, woodName).withSubfolder(woodName + "/").withTextureName("planks").withSuffix("").register(MODID);
+            new AppleCrateAPI.AppleCrateBuilder(bygModId, MODID, woodName).withSubfolder(woodName + "/").withTextureName("planks").withSuffix("").register();
 
-        GeneralRegistry.prepareForRegistry(bygModId, BLOCKS, ITEMS, BLOCK_ENTITY_TYPES);
+        GeneralRegistry.prepareForRegistry(MODID, BLOCKS, ITEMS, BLOCK_ENTITY_TYPES);
 
     }
 }

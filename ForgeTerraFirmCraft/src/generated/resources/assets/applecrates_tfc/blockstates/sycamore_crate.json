@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "applecrates_tfc:block/sycamore_crate"
+    },
+    "facing=south": {
+      "model": "applecrates_tfc:block/sycamore_crate",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "applecrates_tfc:block/sycamore_crate",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "applecrates_tfc:block/sycamore_crate",
+      "y": 90
+    }
+  }
+}

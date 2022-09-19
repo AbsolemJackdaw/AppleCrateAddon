@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "s s",
+    "ppp"
+  ],
+  "key": {
+    "p": {
+      "item": "tfc:wood/planks/willow"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "applecrates_tfc:willow_crate"
+  }
+}
