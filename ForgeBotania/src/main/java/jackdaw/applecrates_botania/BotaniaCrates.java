@@ -15,7 +15,7 @@ public class BotaniaCrates {
     public static final String MODID = "applecrates_botania";
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MODID);
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
-    public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITY_TYPES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES, MODID);
+    public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITY_TYPES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, MODID);
 
     public BotaniaCrates() {
         var bus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -24,12 +24,10 @@ public class BotaniaCrates {
         BLOCK_ENTITY_TYPES.register(bus);
 
         String botaniaModId = "botania";
-        new AppleCrateAPI.AppleCrateBuilder(botaniaModId, "dreamwood").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(botaniaModId, "livingwood").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(botaniaModId, "shimmerwood").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(botaniaModId, "mossy_dreamwood").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(botaniaModId, "mossy_livingwood").register(MODID);
-        GeneralRegistry.prepareForRegistry(botaniaModId, BLOCKS, ITEMS, BLOCK_ENTITY_TYPES);
+        var woods = new String[]{"dreamwood", "livingwood", "shimmerwood", "mossy_dreamwood", "mossy_livingwood"};
+        for (String woodName : woods)
+            new AppleCrateAPI.AppleCrateBuilder(botaniaModId, MODID, woodName).register();
 
+        GeneralRegistry.prepareForRegistry(botaniaModId, BLOCKS, ITEMS, BLOCK_ENTITY_TYPES);
     }
 }

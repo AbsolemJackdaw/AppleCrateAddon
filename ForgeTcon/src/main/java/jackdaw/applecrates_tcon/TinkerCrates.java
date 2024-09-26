@@ -16,7 +16,7 @@ public class TinkerCrates {
 
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MODID);
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
-    public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITY_TYPES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES, MODID);
+    public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITY_TYPES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, MODID);
 
     public TinkerCrates() {
 
@@ -26,10 +26,12 @@ public class TinkerCrates {
         BLOCK_ENTITY_TYPES.register(bus);
 
         String tinkersconstructmodid = "tconstruct";
-        new AppleCrateAPI.AppleCrateBuilder(tinkersconstructmodid, "nahuatl").withSubfolder("wood/").withSuffix("").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(tinkersconstructmodid, "greenheart").withTextureName("planks").withSuffix("").withSubfolder("wood/greenheart/").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(tinkersconstructmodid, "skyroot").withTextureName("planks").withSuffix("").withSubfolder("wood/skyroot/").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(tinkersconstructmodid, "bloodshroom").withTextureName("planks").withSuffix("").withSubfolder("wood/bloodshroom/").register(MODID);
+        var woods = new String[]{"", "greenheart", "skyroot", "bloodshroom"};
+
+        new AppleCrateAPI.AppleCrateBuilder(tinkersconstructmodid, MODID, "nahuatl").withSubfolder("wood/").withSuffix("").register();
+
+        for (String woodName : woods)
+            new AppleCrateAPI.AppleCrateBuilder(tinkersconstructmodid, MODID, woodName).withTextureName("planks").withSuffix("").withSubfolder("wood/" + woodName + "/").register();
 
         GeneralRegistry.prepareForRegistry(tinkersconstructmodid, BLOCKS, ITEMS, BLOCK_ENTITY_TYPES);
 

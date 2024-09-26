@@ -15,7 +15,7 @@ public class EEndCrates {
     public static final String MODID = "applecrates_nourishedend";
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MODID);
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
-    public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITY_TYPES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES, MODID);
+    public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITY_TYPES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, MODID);
 
     public EEndCrates() {
         var bus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -24,11 +24,10 @@ public class EEndCrates {
         BLOCK_ENTITY_TYPES.register(bus);
 
         String nourished_end = "nourished_end";
-        new AppleCrateAPI.AppleCrateBuilder(nourished_end, "cerulean").withParentFolder("blocks/").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(nourished_end, "seldge").withParentFolder("blocks/").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(nourished_end, "verdant").withParentFolder("blocks/").register(MODID);
+        var woods = new String[]{"cerulean", "seldge", "verdant"};
+        for (String woodName : woods)
+            new AppleCrateAPI.AppleCrateBuilder(nourished_end, MODID, woodName).withParentFolder("blocks/").register();
 
         GeneralRegistry.prepareForRegistry(nourished_end, BLOCKS, ITEMS, BLOCK_ENTITY_TYPES);
-
     }
 }

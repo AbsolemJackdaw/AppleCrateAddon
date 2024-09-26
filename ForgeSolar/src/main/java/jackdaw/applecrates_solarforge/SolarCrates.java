@@ -16,7 +16,7 @@ public class SolarCrates {
 
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MODID);
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
-    public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITY_TYPES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES, MODID);
+    public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITY_TYPES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, MODID);
 
     public SolarCrates() {
 
@@ -26,8 +26,9 @@ public class SolarCrates {
         BLOCK_ENTITY_TYPES.register(bus);
 
         String solarforgeModId = "solarforge";
-        new AppleCrateAPI.AppleCrateBuilder(solarforgeModId, "radiant").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(solarforgeModId, "runic").register(MODID);
+        var woods = new String[]{"radiant", "runic"};
+        for (String woodName : woods)
+            new AppleCrateAPI.AppleCrateBuilder(solarforgeModId, MODID, woodName).register();
 
         GeneralRegistry.prepareForRegistry(solarforgeModId, BLOCKS, ITEMS, BLOCK_ENTITY_TYPES);
 

@@ -16,7 +16,7 @@ public class MalumCrates {
 
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MODID);
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
-    public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITY_TYPES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES, MODID);
+    public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITY_TYPES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, MODID);
 
     public MalumCrates() {
         var bus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -25,9 +25,9 @@ public class MalumCrates {
         BLOCK_ENTITY_TYPES.register(bus);
 
         String malum = "malum";
-        new AppleCrateAPI.AppleCrateBuilder(malum, "runewood").register(MODID);
-        new AppleCrateAPI.AppleCrateBuilder(malum, "soulwood").register(MODID);
+        var woods = new String[]{"runewood", "soulwood"};
+        for (String woodName : woods)
+            new AppleCrateAPI.AppleCrateBuilder(malum, MODID, woodName).register();
         GeneralRegistry.prepareForRegistry(malum, BLOCKS, ITEMS, BLOCK_ENTITY_TYPES);
-
     }
 }
