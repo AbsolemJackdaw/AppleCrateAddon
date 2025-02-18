@@ -10,7 +10,7 @@ issueTrackerURL = "https://github.com/ArtixAllMighty/AppleCrates/issues" #option
 
 modId = "applecrates_solarforge" #mandatory
 
-version = "${file.jarVersion}" #mandatory
+version = "${version}" #mandatory
 
 displayName = "Apple Crates for SolarCraft" #mandatory
 

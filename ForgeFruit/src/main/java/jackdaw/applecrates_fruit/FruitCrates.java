@@ -1,14 +1,18 @@
 package jackdaw.applecrates_fruit;
 
+import jackdaw.applecrates.Constants;
 import jackdaw.applecrates.api.AppleCrateAPI;
+import jackdaw.applecrates.api.DataGenerators;
 import jackdaw.applecrates.api.GeneralRegistry;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 
 @Mod(FruitCrates.MODID)
 public class FruitCrates {
@@ -25,11 +29,19 @@ public class FruitCrates {
         BLOCK_ENTITY_TYPES.register(bus);
 
 
-        String fruitTreesModId = "fruittrees";
-        new AppleCrateAPI.AppleCrateBuilder(fruitTreesModId, MODID, "cherry").withSubfolder("fruittrees/").textureInMinecraftDirectory().withBlock("cherry_planks").register();
-        new AppleCrateAPI.AppleCrateBuilder(fruitTreesModId, MODID, "citrus").withSubfolder("fruittrees/").withTextureName("planks").withSuffix("").textureInMinecraftDirectory().withBlock("citrus_planks").register(); //citrus wood is called plank...
+        String fruitTreesModId = "fruitfulfun";
+        new AppleCrateAPI.AppleCrateBuilder(fruitTreesModId, MODID, "redlove").withBlock("redlove_planks").register();
+        new AppleCrateAPI.AppleCrateBuilder(fruitTreesModId, MODID, "citrus").withBlock("citrus_planks").register();
 
         GeneralRegistry.prepareForRegistry(MODID, BLOCKS, ITEMS, BLOCK_ENTITY_TYPES);
 
+    }
+
+    public void addToCreativeTab(BuildCreativeModeTabContentsEvent event) {
+        if (event.getTabKey().equals(GeneralRegistry.CRATE_TAB)) {
+            for (RegistryObject<Item> item : ITEMS.getEntries())
+                event.accept(item);
+
+        }
     }
 }

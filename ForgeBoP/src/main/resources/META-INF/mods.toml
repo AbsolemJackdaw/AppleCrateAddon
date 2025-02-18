@@ -1,8 +1,8 @@
 modLoader = "javafml" #mandatory
 
-loaderVersion = "[40,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
+loaderVersion = "${forge_loader_version_range}" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
 
-license = "gnu v3"
+license = "${license}"
 
 issueTrackerURL = "https://github.com/ArtixAllMighty/AppleCrates/issues" #optional
 
@@ -10,7 +10,7 @@ issueTrackerURL = "https://github.com/ArtixAllMighty/AppleCrates/issues" #option
 
 modId = "applecrates_bop" #mandatory
 
-version = "${file.jarVersion}" #mandatory
+version = "${version}" #mandatory
 
 displayName = "Apple Crates for Bioms o Plenty" #mandatory
 
@@ -18,33 +18,31 @@ displayURL = "https://www.curseforge.com/minecraft/mc-mods/apple-crates" #option
 
 logoFile = "logo.png" #optional
 
-authors = "Absolem Jackdaw" #optional
+authors = '${mod_author}' #optional
 
-description = '''
-Sell your stuff in fancy crates! support for Biomes o Plenty
-'''
+description = '''${description}Biomes 'O Plenty'''
 
 [[dependencies.applecrates_bop]] #optional
 modId = "forge" #mandatory
 mandatory = true #mandatory
-versionRange = "[43,)" #mandatory
-ordering="AFTER"
+versionRange = "[${forge_version},)" #mandatory
+ordering = "AFTER"
 side = "BOTH"
 [[dependencies.applecrates_bop]]
 modId = "minecraft"
 mandatory = true
-versionRange = "[1.19.2,)"
-ordering="AFTER"
+versionRange = "${minecraft_version_range}"
+ordering = "AFTER"
 side = "BOTH"
 [[dependencies.applecrates_bop]]
 modId = "applecrates"
 mandatory = true
 versionRange = "[2.7,)"
-ordering="AFTER"
+ordering = "AFTER"
 side = "SERVER"
 [[dependencies.applecrates_bop]]
 modId = "biomesoplenty"
 mandatory = true
 versionRange = "[0,)"
-ordering="AFTER"
+ordering = "AFTER"
 side = "BOTH"

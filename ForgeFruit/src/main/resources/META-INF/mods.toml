@@ -10,7 +10,7 @@ issueTrackerURL = "https://github.com/ArtixAllMighty/AppleCrates/issues" #option
 
 modId = "applecrates_fruit" #mandatory
 
-version = "${file.jarVersion}" #mandatory
+version = "${version}"#mandatory
 
 displayName = "Apple Crates for Fruit Trees" #mandatory
 
@@ -43,7 +43,7 @@ versionRange = "[2.7,)"
 ordering="AFTER"
 side = "SERVER"
 [[dependencies.applecrates_fruit]]
-modId = "fruittrees"
+modId = "fruitfulfun"
 mandatory = true
 versionRange = "[0,)"
 ordering="AFTER"

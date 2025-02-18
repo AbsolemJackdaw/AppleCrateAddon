@@ -2,6 +2,10 @@ pluginManagement {
     repositories {
         gradlePluginPortal()
         maven {
+            name = 'Forge'
+            url = 'https://maven.minecraftforge.net/'
+        }
+        maven {
             name = 'Fabric'
             url = 'https://maven.fabricmc.net/'
         }
@@ -12,16 +16,21 @@ pluginManagement {
     }
 }
 
+plugins {
+    id 'org.gradle.toolchains.foojay-resolver-convention' version '0.8.0'
+}
+
+// This should match the folder name of the project, or else IDEA may complain (see https://youtrack.jetbrains.com/issue/IDEA-317606)
 rootProject.name = 'AppleCrates'
-include("Common")
+include("common")
 include 'ForgeBoP'
 include 'ForgeBotania'
-include 'ForgeByG'
+//include 'ForgeByG'
 include 'ForgeForbArc'
 include 'ForgeFruit'
 include 'ForgeIntegratedDynamics'
 include 'ForgeMalum'
 include 'ForgeNourishedEnd'
-include 'ForgePremWood'
+//include 'ForgePremWood'
 include 'ForgeSolar'
-include 'ForgeTcon'
+//include 'ForgeTcon'
