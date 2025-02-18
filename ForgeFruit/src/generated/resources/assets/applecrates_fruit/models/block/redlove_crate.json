@@ -1,0 +1,7 @@
+{
+  "parent": "applecrates:block/applecrate",
+  "textures": {
+    "0": "fruitfulfun:block/redlove_planks",
+    "particle": "fruitfulfun:block/redlove_planks"
+  }
+}

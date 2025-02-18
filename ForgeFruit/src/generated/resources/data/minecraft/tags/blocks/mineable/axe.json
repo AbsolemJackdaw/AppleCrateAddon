@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "applecrates_fruit:redlove_crate",
+      "required": false
+    },
+    {
+      "id": "applecrates_fruit:citrus_crate",
+      "required": false
+    }
+  ]
+}
