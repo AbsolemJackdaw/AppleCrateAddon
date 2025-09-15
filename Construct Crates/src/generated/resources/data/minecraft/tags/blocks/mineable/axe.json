@@ -1,0 +1,36 @@
+{
+  "values": [
+    {
+      "id": "applecrates_tcon:blazewood_crate",
+      "required": false
+    },
+    {
+      "id": "applecrates_tcon:lavawood_crate",
+      "required": false
+    },
+    {
+      "id": "applecrates_tcon:nahuatl_crate",
+      "required": false
+    },
+    {
+      "id": "applecrates_tcon:purple_slimewood_crate",
+      "required": false
+    },
+    {
+      "id": "applecrates_tcon:enderbark_crate",
+      "required": false
+    },
+    {
+      "id": "applecrates_tcon:greenheart_crate",
+      "required": false
+    },
+    {
+      "id": "applecrates_tcon:skyroot_crate",
+      "required": false
+    },
+    {
+      "id": "applecrates_tcon:bloodshroom_crate",
+      "required": false
+    }
+  ]
+}

@@ -21,17 +21,29 @@ plugins {
 }
 
 // This should match the folder name of the project, or else IDEA may complain (see https://youtrack.jetbrains.com/issue/IDEA-317606)
-rootProject.name = 'AppleCrates'
-include("common")
-include 'ForgeBoP'
-include 'ForgeBotania'
-//include 'ForgeByG'
-include 'ForgeForbArc'
-include 'ForgeFruit'
-include 'ForgeIntegratedDynamics'
-include 'ForgeMalum'
-include 'ForgeNourishedEnd'
-//include 'ForgePremWood'
-include 'ForgeSolar'
-//include 'ForgeTcon'
-include 'ForgeTerraFirmaCraft'
+rootProject.name = 'AppleCratesAddon'
+include(":common")
+include(":plentyCrates")
+include(":botanicalCrates")
+include(":forbiddenCrates")
+include(":fruitCrates")
+include(":dynamicCrates")
+include(":malumianCrates")
+include(":enlightenedCrates")
+include(":solarCrates")
+include(":firmaCrates")
+// include(":bygCrates")
+// include(":premiumCrates")
+include(":constructCrates")
+project(":plentyCrates").projectDir = file(bop)
+project(":botanicalCrates").projectDir = file(botania)
+project(":forbiddenCrates").projectDir = file(forbarc)
+project(":fruitCrates").projectDir = file(fruit)
+project(":dynamicCrates").projectDir = file(intdyn)
+project(":malumianCrates").projectDir = file(malum)
+project(":enlightenedCrates").projectDir = file(nourishedend)
+project(":solarCrates").projectDir = file(solar)
+project(":firmaCrates").projectDir = file(tfc)
+// project(":bygCrates").projectDir = file(byg)
+// project(":premiumCrates").projectDir = file(pw)
+project(":constructCrates").projectDir = file(tcon)

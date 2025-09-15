@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "applecrates_tcon:block/purple_slimewood_crate",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "applecrates_tcon:block/purple_slimewood_crate"
+    },
+    "facing=south": {
+      "model": "applecrates_tcon:block/purple_slimewood_crate",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "applecrates_tcon:block/purple_slimewood_crate",
+      "y": 270
+    }
+  }
+}

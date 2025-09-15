@@ -1,0 +1,7 @@
+{
+  "parent": "applecrates:block/applecrate",
+  "textures": {
+    "0": "tconstruct:block/wood/nahuatl",
+    "particle": "tconstruct:block/wood/nahuatl"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "p": {
+      "item": "tconstruct:skyroot_planks"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "s s",
+    "ppp"
+  ],
+  "result": {
+    "item": "applecrates_tcon:skyroot_crate"
+  },
+  "show_notification": false
+}
