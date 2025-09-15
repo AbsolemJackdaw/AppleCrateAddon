@@ -32,7 +32,7 @@ public class EEndCrates {
         for (String woodName : woods)
             new AppleCrateAPI.AppleCrateBuilder(nourished_end, MODID, woodName).withParentFolder("blocks/").register();
 
-        GeneralRegistry.prepareForRegistry(nourished_end, BLOCKS, ITEMS, BLOCK_ENTITY_TYPES);
+        GeneralRegistry.prepareForRegistry(MODID, BLOCKS, ITEMS, BLOCK_ENTITY_TYPES);
     }
 
     @SubscribeEvent

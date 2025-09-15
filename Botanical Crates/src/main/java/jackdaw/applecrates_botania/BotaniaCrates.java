@@ -32,7 +32,7 @@ public class BotaniaCrates {
         for (String woodName : woods)
             new AppleCrateAPI.AppleCrateBuilder(botaniaModId, MODID, woodName).register();
 
-        GeneralRegistry.prepareForRegistry(botaniaModId, BLOCKS, ITEMS, BLOCK_ENTITY_TYPES);
+        GeneralRegistry.prepareForRegistry(MODID, BLOCKS, ITEMS, BLOCK_ENTITY_TYPES);
     }
 
     @SubscribeEvent

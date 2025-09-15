@@ -32,7 +32,7 @@ public class MalumCrates {
         var woods = new String[]{"runewood", "soulwood"};
         for (String woodName : woods)
             new AppleCrateAPI.AppleCrateBuilder(malum, MODID, woodName).register();
-        GeneralRegistry.prepareForRegistry(malum, BLOCKS, ITEMS, BLOCK_ENTITY_TYPES);
+        GeneralRegistry.prepareForRegistry(MODID, BLOCKS, ITEMS, BLOCK_ENTITY_TYPES);
     }
 
     @SubscribeEvent

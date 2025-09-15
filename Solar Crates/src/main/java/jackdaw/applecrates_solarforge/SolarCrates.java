@@ -34,7 +34,7 @@ public class SolarCrates {
         for (String woodName : woods)
             new AppleCrateAPI.AppleCrateBuilder(solarforgeModId, MODID, woodName).register();
 
-        GeneralRegistry.prepareForRegistry(solarforgeModId, BLOCKS, ITEMS, BLOCK_ENTITY_TYPES);
+        GeneralRegistry.prepareForRegistry(MODID, BLOCKS, ITEMS, BLOCK_ENTITY_TYPES);
 
     }
 
