@@ -27,10 +27,10 @@ public class EEndCrates {
         ITEMS.register(bus);
         BLOCK_ENTITY_TYPES.register(bus);
 
-        String nourished_end = "nourished_end";
-        var woods = new String[]{"cerulean", "seldge", "verdant"};
+        String nourished_end = "enlightened_end";
+        var woods = new String[]{"cerulean", "indigo"};
         for (String woodName : woods)
-            new AppleCrateAPI.AppleCrateBuilder(nourished_end, MODID, woodName).withParentFolder("blocks/").register();
+            new AppleCrateAPI.AppleCrateBuilder(nourished_end, MODID, woodName).register();
 
         GeneralRegistry.prepareForRegistry(MODID, BLOCKS, ITEMS, BLOCK_ENTITY_TYPES);
     }

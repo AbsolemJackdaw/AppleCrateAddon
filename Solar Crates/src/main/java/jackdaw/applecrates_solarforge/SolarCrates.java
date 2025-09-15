@@ -29,7 +29,7 @@ public class SolarCrates {
         ITEMS.register(bus);
         BLOCK_ENTITY_TYPES.register(bus);
 
-        String solarforgeModId = "solarforge";
+        String solarforgeModId = "solarcraft";
         var woods = new String[]{"radiant", "runic"};
         for (String woodName : woods)
             new AppleCrateAPI.AppleCrateBuilder(solarforgeModId, MODID, woodName).register();

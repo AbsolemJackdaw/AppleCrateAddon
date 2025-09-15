@@ -1,10 +1,6 @@
 {
   "values": [
     {
-      "id": "applecrates_bop:cherry_crate",
-      "required": false
-    },
-    {
       "id": "applecrates_bop:dead_crate",
       "required": false
     },

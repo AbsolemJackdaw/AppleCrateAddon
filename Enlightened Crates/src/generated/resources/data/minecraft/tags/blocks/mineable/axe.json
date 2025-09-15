@@ -5,11 +5,7 @@
       "required": false
     },
     {
-      "id": "applecrates_nourishedend:seldge_crate",
-      "required": false
-    },
-    {
-      "id": "applecrates_nourishedend:verdant_crate",
+      "id": "applecrates_nourishedend:indigo_crate",
       "required": false
     }
   ]

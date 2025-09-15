@@ -1,18 +1,20 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "s s",
-    "ppp"
-  ],
+  "category": "misc",
   "key": {
     "p": {
-      "item": "solarforge:radiant_planks"
+      "item": "solarcraft:radiant_planks"
     },
     "s": {
       "item": "minecraft:stick"
     }
   },
+  "pattern": [
+    "s s",
+    "ppp"
+  ],
   "result": {
     "item": "applecrates_solarforge:radiant_crate"
-  }
+  },
+  "show_notification": false
 }

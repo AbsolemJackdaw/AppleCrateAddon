@@ -1,10 +1,6 @@
 {
   "values": [
     {
-      "id": "applecrates_forbarc:cherry_crate",
-      "required": false
-    },
-    {
       "id": "applecrates_forbarc:edelwood_crate",
       "required": false
     },

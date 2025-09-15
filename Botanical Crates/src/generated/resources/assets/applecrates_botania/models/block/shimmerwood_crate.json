@@ -1,7 +1,7 @@
 {
   "parent": "applecrates:block/applecrate",
   "textures": {
-    "particle": "botania:block/shimmerwood_planks",
-    "0": "botania:block/shimmerwood_planks"
+    "0": "botania:block/shimmerwood_planks",
+    "particle": "botania:block/shimmerwood_planks"
   }
 }

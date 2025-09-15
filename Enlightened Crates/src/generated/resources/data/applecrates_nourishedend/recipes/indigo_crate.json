@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "p": {
-      "item": "botania:shimmerwood_planks"
+      "item": "enlightened_end:indigo_planks"
     },
     "s": {
       "item": "minecraft:stick"
@@ -14,7 +14,7 @@
     "ppp"
   ],
   "result": {
-    "item": "applecrates_botania:shimmerwood_crate"
+    "item": "applecrates_nourishedend:indigo_crate"
   },
   "show_notification": false
 }

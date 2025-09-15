@@ -30,7 +30,7 @@ public class PlentyCrates {
         BLOCK_ENTITY_TYPES.register(bus);
 
         String[] names = new String[]{
-                "cherry", "dead", "fir", "hellbark", "jacaranda", "magic", "mahogany", "palm", "redwood", "umbran", "willow"
+                "dead", "fir", "hellbark", "jacaranda", "magic", "mahogany", "palm", "redwood", "umbran", "willow"
         };
 
         String biomesoplenty = "biomesoplenty";

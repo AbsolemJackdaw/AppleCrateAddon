@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "applecrates_bop:cherry_crate"
+          "name": "applecrates_nourishedend:indigo_crate"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "applecrates_bop:blocks/cherry_crate"
+  "random_sequence": "applecrates_nourishedend:blocks/indigo_crate"
 }

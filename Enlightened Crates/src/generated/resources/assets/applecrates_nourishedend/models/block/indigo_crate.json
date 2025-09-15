@@ -1,0 +1,7 @@
+{
+  "parent": "applecrates:block/applecrate",
+  "textures": {
+    "0": "enlightened_end:block/indigo_planks",
+    "particle": "enlightened_end:block/indigo_planks"
+  }
+}

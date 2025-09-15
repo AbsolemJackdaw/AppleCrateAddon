@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "applecrates_nourishedend:block/indigo_crate",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "applecrates_nourishedend:block/indigo_crate"
+    },
+    "facing=south": {
+      "model": "applecrates_nourishedend:block/indigo_crate",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "applecrates_nourishedend:block/indigo_crate",
+      "y": 270
+    }
+  }
+}

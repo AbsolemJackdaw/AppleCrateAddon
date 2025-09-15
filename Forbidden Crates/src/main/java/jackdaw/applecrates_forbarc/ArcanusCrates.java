@@ -30,7 +30,7 @@ public class ArcanusCrates {
         ITEMS.register(bus);
         BLOCK_ENTITY_TYPES.register(bus);
         String[] names = new String[]{
-                "cherry", "edelwood", "fungyss", "aurum", "arcane_edelwood"
+                "edelwood", "fungyss", "aurum", "arcane_edelwood"
         };
         String forbidden_arcanus = "forbidden_arcanus";
         for (String wood : names)

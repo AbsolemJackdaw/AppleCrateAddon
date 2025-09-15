@@ -31,7 +31,8 @@ public class MalumCrates {
         String malum = "malum";
         var woods = new String[]{"runewood", "soulwood"};
         for (String woodName : woods)
-            new AppleCrateAPI.AppleCrateBuilder(malum, MODID, woodName).register();
+            new AppleCrateAPI.AppleCrateBuilder(malum, MODID, woodName).withSubfolder(woodName + "/").register();
+
         GeneralRegistry.prepareForRegistry(MODID, BLOCKS, ITEMS, BLOCK_ENTITY_TYPES);
     }
 
