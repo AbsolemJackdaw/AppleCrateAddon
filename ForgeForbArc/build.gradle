@@ -30,7 +30,8 @@ legacyForge {
         }
         data {
             data()
-            programArguments.addAll '--mod', project.forbarc_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
+            def fullModId = "${project.mod_id}${project.forbarc_id}"
+            programArguments.addAll '--mod', fullModId, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
         }
         server {
             server()
@@ -77,7 +78,6 @@ repositories { //all of these are for adding crates compat
 dependencies {
     compileOnly project(":common")
     annotationProcessor("org.spongepowered:mixin:0.8.5-SNAPSHOT:processor")
-    modImplementation("curse.maven:apple-crates-630726:${apple_crates_file}")
     modImplementation("curse.maven:apple-crates-630726:${apple_crates_file}")
     modRuntimeOnly("curse.maven:valhelsia-core-416935:${valhelsia_file}")
     modRuntimeOnly("curse.maven:forbidden-arcanus-309858:${forbarc_file}")

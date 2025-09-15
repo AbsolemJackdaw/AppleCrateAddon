@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "p": {
+      "item": "forbidden_arcanus:aurum_planks"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "s s",
+    "ppp"
+  ],
+  "result": {
+    "item": "applecrates_forbarc:aurum_crate"
+  },
+  "show_notification": false
+}

@@ -1,16 +1,22 @@
 package jackdaw.applecrates_forbarc;
 
+import jackdaw.applecrates.Constants;
 import jackdaw.applecrates.api.AppleCrateAPI;
 import jackdaw.applecrates.api.GeneralRegistry;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.loading.FMLLoader;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 
 @Mod(ArcanusCrates.MODID)
+@Mod.EventBusSubscriber(modid = ArcanusCrates.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ArcanusCrates {
     public static final String MODID = "applecrates_forbarc";
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MODID);
@@ -24,7 +30,7 @@ public class ArcanusCrates {
         ITEMS.register(bus);
         BLOCK_ENTITY_TYPES.register(bus);
         String[] names = new String[]{
-                "cherrywood", "edelwood", "fungyss", "mysterywood"
+                "cherry", "edelwood", "fungyss", "aurum", "arcane_edelwood"
         };
         String forbidden_arcanus = "forbidden_arcanus";
         for (String wood : names)
@@ -32,5 +38,13 @@ public class ArcanusCrates {
 
         GeneralRegistry.prepareForRegistry(MODID, BLOCKS, ITEMS, BLOCK_ENTITY_TYPES);
 
+    }
+
+    @SubscribeEvent
+    public static void addToCreativeTab(BuildCreativeModeTabContentsEvent event) {
+        if (event.getTabKey().equals(GeneralRegistry.CRATE_TAB.getKey())) {
+            for (RegistryObject<Item> item : ITEMS.getEntries())
+                event.accept(item);
+        }
     }
 }

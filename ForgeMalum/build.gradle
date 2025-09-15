@@ -30,7 +30,8 @@ legacyForge {
         }
         data {
             data()
-            programArguments.addAll '--mod', project.malum_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
+            def fullModId = "${project.mod_id}${project.malum_id}"
+            programArguments.addAll '--mod', fullModId, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
         }
         server {
             server()
@@ -46,8 +47,26 @@ legacyForge {
 
 sourceSets.main.resources.srcDir 'src/generated/resources'
 
+repositories { //all of these are for adding crates compat
+    mavenLocal()
+    maven {
+        name = 'Curse Maven'
+        url = 'https://cursemaven.com'
+        content {
+            includeGroup 'curse.maven'
+        }
+    }
+    maven { url 'https://maven.blamejared.com' }
+    maven {
+        url = "https://maven.theillusivec4.top/"
+    }
+}
+
 dependencies {
     compileOnly project(":common")
+    annotationProcessor("org.spongepowered:mixin:0.8.5-SNAPSHOT:processor")
+    modImplementation("curse.maven:apple-crates-630726:${apple_crates_file}")
+    //mods
     modRuntimeOnly("curse.maven:curios-309927:${curios_file}")
     modRuntimeOnly("curse.maven:lodestone-616457:${lodestone_file}")
     modRuntimeOnly("curse.maven:malum-484064:${malum_file}")

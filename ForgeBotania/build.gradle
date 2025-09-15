@@ -31,7 +31,8 @@ legacyForge {
         }
         data {
             data()
-            programArguments.addAll '--mod', project.bot_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
+            def fullModId = "${project.mod_id}${project.bot_id}"
+            programArguments.addAll '--mod', fullModId, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
         }
         server {
             server()
@@ -78,7 +79,6 @@ repositories { //all of these are for adding crates compat
 dependencies {
     compileOnly project(":common")
     annotationProcessor("org.spongepowered:mixin:0.8.5-SNAPSHOT:processor")
-    modImplementation("curse.maven:apple-crates-630726:${apple_crates_file}")
     modImplementation("curse.maven:apple-crates-630726:${apple_crates_file}")
     modRuntimeOnly("curse.maven:botania-225643:${botania_file}")
     modRuntimeOnly("curse.maven:patchouli-306770:${patchouli_file}")

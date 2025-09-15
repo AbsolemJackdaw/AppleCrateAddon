@@ -1,7 +1,7 @@
 {
   "values": [
     {
-      "id": "applecrates_forbarc:cherrywood_crate",
+      "id": "applecrates_forbarc:cherry_crate",
       "required": false
     },
     {
@@ -13,7 +13,11 @@
       "required": false
     },
     {
-      "id": "applecrates_forbarc:mysterywood_crate",
+      "id": "applecrates_forbarc:aurum_crate",
+      "required": false
+    },
+    {
+      "id": "applecrates_forbarc:arcane_edelwood_crate",
       "required": false
     }
   ]

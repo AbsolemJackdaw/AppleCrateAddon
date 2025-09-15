@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "key": {
     "p": {
       "item": "forbidden_arcanus:fungyss_planks"
@@ -14,5 +15,6 @@
   ],
   "result": {
     "item": "applecrates_forbarc:fungyss_crate"
-  }
+  },
+  "show_notification": false
 }

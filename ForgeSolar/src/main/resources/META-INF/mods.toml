@@ -43,7 +43,7 @@ versionRange = "[2.7,)"
 ordering="AFTER"
 side = "SERVER"
 [[dependencies.applecrates_solarforge]]
-modId = "solarforge"
+modId = "solarcraft"
 mandatory = true
 versionRange = "[0,)"
 ordering="AFTER"

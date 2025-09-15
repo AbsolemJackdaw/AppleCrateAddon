@@ -31,7 +31,8 @@ legacyForge {
         }
         data {
             data()
-				programArguments.addAll '--mod', project.bop_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
+            def fullModId = "${project.mod_id}${project.bop_id}"
+            programArguments.addAll '--mod', fullModId, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
         }
         server {
             server()
@@ -79,9 +80,9 @@ dependencies {
     compileOnly project(":common")
     annotationProcessor("org.spongepowered:mixin:0.8.5-SNAPSHOT:processor")
     modImplementation("curse.maven:apple-crates-630726:${apple_crates_file}")
-    modImplementation("curse.maven:apple-crates-630726:${apple_crates_file}")
+    modRuntimeOnly("curse.maven:glitchcore-955399:${glitchcore_file}")
     modRuntimeOnly("curse.maven:biomes-o-plenty-220318:${bop_file}")
-	modRuntimeOnly("curse.maven:terrablender-563928:${terrablender_file}")
+    modRuntimeOnly("curse.maven:terrablender-563928:${terrablender_file}")
 }
 
 jar {

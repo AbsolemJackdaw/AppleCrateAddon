@@ -1,9 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "s s",
-    "ppp"
-  ],
+  "category": "misc",
   "key": {
     "p": {
       "item": "botania:livingwood_planks"
@@ -12,7 +9,12 @@
       "item": "minecraft:stick"
     }
   },
+  "pattern": [
+    "s s",
+    "ppp"
+  ],
   "result": {
-    "item": "applecrates_botania:livingwood_crate"
-  }
+    "item": "minecraft:air"
+  },
+  "show_notification": false
 }

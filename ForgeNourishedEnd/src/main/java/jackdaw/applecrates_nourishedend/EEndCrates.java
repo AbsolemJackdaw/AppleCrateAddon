@@ -5,12 +5,16 @@ import jackdaw.applecrates.api.GeneralRegistry;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 
 @Mod(EEndCrates.MODID)
+@Mod.EventBusSubscriber(modid = EEndCrates.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class EEndCrates {
     public static final String MODID = "applecrates_nourishedend";
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MODID);
@@ -29,5 +33,13 @@ public class EEndCrates {
             new AppleCrateAPI.AppleCrateBuilder(nourished_end, MODID, woodName).withParentFolder("blocks/").register();
 
         GeneralRegistry.prepareForRegistry(nourished_end, BLOCKS, ITEMS, BLOCK_ENTITY_TYPES);
+    }
+
+    @SubscribeEvent
+    public static void addToCreativeTab(BuildCreativeModeTabContentsEvent event) {
+        if (event.getTabKey().equals(GeneralRegistry.CRATE_TAB.getKey())) {
+            for (RegistryObject<Item> item : ITEMS.getEntries())
+                event.accept(item);
+        }
     }
 }

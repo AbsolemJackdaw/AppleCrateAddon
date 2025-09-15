@@ -30,7 +30,8 @@ legacyForge {
         }
         data {
             data()
-            programArguments.addAll '--mod', "applecrates_fruit", '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
+            def fullModId = "${project.mod_id}${project.fruit_id}"
+            programArguments.addAll '--mod', fullModId, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
         }
         server {
             server()

@@ -1,0 +1,7 @@
+{
+  "parent": "applecrates:block/applecrate",
+  "textures": {
+    "0": "forbidden_arcanus:block/cherry_planks",
+    "particle": "forbidden_arcanus:block/cherry_planks"
+  }
+}

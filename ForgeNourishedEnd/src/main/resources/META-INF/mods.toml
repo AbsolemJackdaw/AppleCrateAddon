@@ -43,7 +43,7 @@ versionRange = "[2.7,)"
 ordering="AFTER"
 side = "SERVER"
 [[dependencies.applecrates_nourishedend]]
-modId = "nourished_end"
+modId = "enlightened_end"
 mandatory = true
 versionRange = "[0,)"
 ordering="AFTER"

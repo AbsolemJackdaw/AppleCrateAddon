@@ -5,12 +5,16 @@ import jackdaw.applecrates.api.GeneralRegistry;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 
 @Mod(SolarCrates.MODID)
+@Mod.EventBusSubscriber(modid = SolarCrates.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class SolarCrates {
     public static final String MODID = "applecrates_solarforge";
 
@@ -32,5 +36,13 @@ public class SolarCrates {
 
         GeneralRegistry.prepareForRegistry(solarforgeModId, BLOCKS, ITEMS, BLOCK_ENTITY_TYPES);
 
+    }
+
+    @SubscribeEvent
+    public static void addToCreativeTab(BuildCreativeModeTabContentsEvent event) {
+        if (event.getTabKey().equals(GeneralRegistry.CRATE_TAB.getKey())) {
+            for (RegistryObject<Item> item : ITEMS.getEntries())
+                event.accept(item);
+        }
     }
 }
