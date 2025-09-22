@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "${mod_id}${bop_id}",
+  "version": "${version}",
+  "name": "${bop}",
+  "description": "${mod_description}",
+  "authors": [
+    "${mod_author}"
+  ],
+  "contact": {
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/plenty-crates",
+    "sources": "https://github.com/ArtixAllMighty/AppleCrateAddon"
+  },
+  "license": "${license}",
+  "icon": "assets/modid/${mod_id}.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "jackdaw.applecrates_byg.ByGCrates"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.14",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
+  

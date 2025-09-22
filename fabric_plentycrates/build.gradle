@@ -1,0 +1,82 @@
+plugins {
+    id 'multiloader-loader'
+    id 'fabric-loom'
+    id 'net.darkhax.curseforgegradle' version '1.0.11'
+}
+
+repositories { //all of these are for adding crates compat
+    mavenLocal()
+    maven {
+        name = 'Curse Maven'
+        url = 'https://cursemaven.com'
+        content {
+            includeGroup 'curse.maven'
+        }
+    }
+    maven { url 'https://maven.blamejared.com' }
+    maven {
+        url = "https://maven.theillusivec4.top/"
+    }
+}
+
+//include forge generated crates
+sourceSets {
+    main {
+        resources {
+            srcDir "../forge_plentycrates/src/generated/resources"
+        }
+    }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${minecraft_version}"
+    mappings loom.layered {
+        officialMojangMappings()
+        parchment("org.parchmentmc.data:parchment-${parchment_minecraft}:${parchment_version}@zip")
+    }
+    modImplementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
+    implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
+    implementation project(":common")
+
+    //mods
+    modImplementation("curse.maven:apple-crates-630726:${apple_crates_file_fabric}")
+    modRuntimeOnly("curse.maven:biomes-o-plenty-220318:${bop_file_fabric}")
+    modRuntimeOnly("curse.maven:terrablender-565956:${terrablender_file_fabric}")
+    modRuntimeOnly("curse.maven:glitchcore-955399:${glitchcore_file_fabric}")
+    //glitchcore config
+    modImplementation "com.electronwill.night-config:core:3.6.5"
+    modImplementation "com.electronwill.night-config:toml:3.6.5"
+    modImplementation "net.jodah:typetools:0.6.3"
+}
+
+loom {
+    runs {
+        client {
+            client()
+            setConfigName("Fabric Client")
+            ideConfigGenerated(true)
+            runDir("run")
+        }
+        server {
+            server()
+            setConfigName("Fabric Server")
+            ideConfigGenerated(true)
+            runDir("run")
+        }
+    }
+}
+
+task publishCurseForge(type: net.darkhax.curseforgegradle.TaskPublishCurseForge) {
+
+    apiToken = findProperty('cf_api_token')
+    def mainFile = upload(669343, file("${project.buildDir}/libs/${archivesBaseName}-${version}.jar"))
+    mainFile.displayName = "${bop}-fabric-${minecraft_version}-${version}"
+    mainFile.releaseType = 'release'
+    mainFile.changelog = "${changelog}"
+    mainFile.changelogType = 'markdown'
+    mainFile.addJavaVersion('Java 17')
+    mainFile.addRequirement('apple-crates')
+    mainFile.addRequirement('biomes-o-plenty')
+    mainFile.addModLoader('fabric')
+}

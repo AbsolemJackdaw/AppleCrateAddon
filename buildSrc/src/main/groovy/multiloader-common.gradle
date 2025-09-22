@@ -4,7 +4,7 @@ plugins {
 }
 
 base {
-    archivesName = "${project.projectDir.name}-${minecraft_version}"
+    archivesName = "${mod_id}-${project.name}-${minecraft_version}"
 }
 
 java {
@@ -97,7 +97,7 @@ processResources {
             'mod_id'                    : mod_id,
             'license'                   : license,
             'credits'                   : credits,
-            'description'               : description,
+            'mod_description'           : mod_description,
             'parchment_minecraft'       : parchment_minecraft,
             'parchment_version'         : parchment_version,
 
@@ -157,9 +157,12 @@ processResources {
             'malum_id'                  : malum_id,
             'eend_id'                   : eend_id,
             'tcon_id'                   : tcon_id,
-            'forbarc_id'                : forbarc_id
-    ]
+            'forbarc_id'                : forbarc_id,
 
+            'malum_file_fabric'         : malum_file_fabric,
+            'lodestone_file_fabric'     : lodestone_file_fabric,
+            'apple_crates_file_fabric'  : apple_crates_file_fabric
+    ]
 
     var jsonExpandProps = expandProps.collectEntries {
         key, value -> [(key): value instanceof String ? value.replace("\n", "\\\\n") : value]
