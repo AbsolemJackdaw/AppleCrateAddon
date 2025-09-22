@@ -27,7 +27,8 @@ include("fabric")
 include("forge")
 
 include("forge_botanicalcrates")
-include("forge_bygcrates")
+//libraries are broken in 1.20.1, i cant get them to work.
+//include("forge_bygcrates")
 include("fabric_bygcrates")
 include("forge_dyncrates")
 include("forge_enlightendcrates")

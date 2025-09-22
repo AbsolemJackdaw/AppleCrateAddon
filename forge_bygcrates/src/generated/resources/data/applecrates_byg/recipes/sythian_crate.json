@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "p": {
-      "item": "byg:sythian_planks"
+      "item": "biomeswevegone:sythian_planks"
     },
     "s": {
       "item": "minecraft:stick"

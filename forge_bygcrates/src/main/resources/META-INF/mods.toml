@@ -46,5 +46,5 @@ side = "BOTH"
 modId = "biomeswevegone"
 mandatory = true
 versionRange = "[0,)"
-ordering="AFTER"
+ordering = "AFTER"
 side = "BOTH"

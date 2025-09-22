@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "p": {
-      "item": "byg:mahogany_planks"
+      "item": "biomeswevegone:mahogany_planks"
     },
     "s": {
       "item": "minecraft:stick"

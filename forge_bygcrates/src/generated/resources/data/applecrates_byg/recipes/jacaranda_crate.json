@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "p": {
-      "item": "byg:jacaranda_planks"
+      "item": "biomeswevegone:jacaranda_planks"
     },
     "s": {
       "item": "minecraft:stick"

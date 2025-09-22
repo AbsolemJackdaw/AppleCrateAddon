@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "p": {
-      "item": "byg:lament_planks"
+      "item": "biomeswevegone:lament_planks"
     },
     "s": {
       "item": "minecraft:stick"

@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "p": {
-      "item": "byg:imparius_planks"
+      "item": "biomeswevegone:imparius_planks"
     },
     "s": {
       "item": "minecraft:stick"

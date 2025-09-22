@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "p": {
-      "item": "byg:rainbow_eucalyptus_planks"
+      "item": "biomeswevegone:rainbow_eucalyptus_planks"
     },
     "s": {
       "item": "minecraft:stick"

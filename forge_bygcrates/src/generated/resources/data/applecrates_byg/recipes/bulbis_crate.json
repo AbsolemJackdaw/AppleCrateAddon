@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "p": {
-      "item": "byg:bulbis_planks"
+      "item": "biomeswevegone:bulbis_planks"
     },
     "s": {
       "item": "minecraft:stick"

@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "p": {
-      "item": "byg:nightshade_planks"
+      "item": "biomeswevegone:nightshade_planks"
     },
     "s": {
       "item": "minecraft:stick"

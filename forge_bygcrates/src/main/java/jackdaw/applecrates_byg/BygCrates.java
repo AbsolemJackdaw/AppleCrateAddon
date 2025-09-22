@@ -23,9 +23,9 @@ public class BygCrates {
         ITEMS.register(bus);
         BLOCK_ENTITY_TYPES.register(bus);
         String bygModId = "biomeswevegone";
-        String[] bygWoods = {"aspen", "baobab", "blue_enchanted", "bulbis", "cherry", "cika", "cypress", "ebony", "embur", "ether", "fir", "green_enchanted",
-                "holly", "imparius", "jacaranda", "lament", "mahogany", "white_mangrove", "maple", "nightshade", "palm", "pine", "rainbow_eucalyptus",
-                "redwood", "skyris", "sythian", "willow", "witch_hazel", "zelkova"};
+        String[] bygWoods = {"aspen", "baobab", "blue_enchanted", "cika", "cypress", "ebony", "fir", "green_enchanted",
+                "holly", "jacaranda", "mahogany", "white_mangrove", "maple", "palm", "pine", "rainbow_eucalyptus",
+                "redwood", "skyris", "willow", "witch_hazel", "zelkova"};
         for (String woodName : bygWoods)
             new AppleCrateAPI.AppleCrateBuilder(bygModId, MODID, woodName).withSubfolder(woodName + "/").withTextureName("planks").withSuffix("").register();
 

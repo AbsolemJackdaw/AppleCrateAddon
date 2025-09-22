@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "p": {
-      "item": "byg:blue_enchanted_planks"
+      "item": "biomeswevegone:blue_enchanted_planks"
     },
     "s": {
       "item": "minecraft:stick"
