@@ -132,6 +132,7 @@ processResources {
             'malum_file'                : malum_file,
             'enl_end_file'              : enl_end_file,
             'solar_file'                : solar_file,
+            'deeperdarker_file'         : deeperdarker_file,
 
             // Mod-Specific Dependencies
             'bop'                       : bop,
@@ -145,6 +146,7 @@ processResources {
             'fruit'                     : fruit,
             'solar'                     : solar,
             'intdyn'                    : intdyn,
+            'deeperdarker'              : deeperdarker,
 
             // Mod ID Mappings
             'byg_id'                    : byg_id,
@@ -158,6 +160,7 @@ processResources {
             'eend_id'                   : eend_id,
             'tcon_id'                   : tcon_id,
             'forbarc_id'                : forbarc_id,
+            'deeperdarker_id'           : deeperdarker_id,
 
             'malum_file_fabric'         : malum_file_fabric,
             'lodestone_file_fabric'     : lodestone_file_fabric,
