@@ -1,0 +1,68 @@
+{
+  "values": [
+    {
+      "id": "applecrates_azalea:titanium_azalea_crate",
+      "required": false
+    },
+    {
+      "id": "applecrates_azalea:tecal_azalea_crate",
+      "required": false
+    },
+    {
+      "id": "applecrates_azalea:bromelia_azalea_crate",
+      "required": false
+    },
+    {
+      "id": "applecrates_azalea:lethe_azalea_crate",
+      "required": false
+    },
+    {
+      "id": "applecrates_azalea:fiss_azalea_crate",
+      "required": false
+    },
+    {
+      "id": "applecrates_azalea:verdant_azalea_crate",
+      "required": false
+    },
+    {
+      "id": "applecrates_azalea:bright_azalea_crate",
+      "required": false
+    },
+    {
+      "id": "applecrates_azalea:pluvial_azalea_crate",
+      "required": false
+    },
+    {
+      "id": "applecrates_azalea:dusk_azalea_crate",
+      "required": false
+    },
+    {
+      "id": "applecrates_azalea:cerulean_azalea_crate",
+      "required": false
+    },
+    {
+      "id": "applecrates_azalea:walnut_azalea_crate",
+      "required": false
+    },
+    {
+      "id": "applecrates_azalea:azule_azalea_crate",
+      "required": false
+    },
+    {
+      "id": "applecrates_azalea:earthen_azalea_crate",
+      "required": false
+    },
+    {
+      "id": "applecrates_azalea:pastoral_azalea_crate",
+      "required": false
+    },
+    {
+      "id": "applecrates_azalea:roze_azalea_crate",
+      "required": false
+    },
+    {
+      "id": "applecrates_azalea:pitch_azalea_crate",
+      "required": false
+    }
+  ]
+}

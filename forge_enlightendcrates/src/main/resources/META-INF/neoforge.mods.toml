@@ -1,0 +1,48 @@
+modLoader = "javafml" #mandatory
+loaderVersion = "${neoforge_loader_version_range}" #mandatory
+license = "${license}"
+
+issueTrackerURL = "https://github.com/ArtixAllMighty/AppleCrates/issues" #optional
+
+[[mods]] #mandatory
+
+modId = "applecrates_nourishedend" #mandatory
+
+version = "${version}" #mandatory
+
+displayName = "Apple Crates for Enlightened End" #mandatory
+
+displayURL = "https://www.curseforge.com/minecraft/mc-mods/apple-crates" #optional
+
+logoFile = "logo.png" #optional
+
+authors = "${mod_author}" #optional
+
+description = '''
+${mod_description} Enlightened End
+'''
+
+[[dependencies.applecrates_nourishedend]] #optional
+modId = "neoforge" #mandatory
+type = "required" #mandatory
+versionRange = "[${neoforge_version},)" #mandatory
+ordering="AFTER"
+side = "BOTH"
+[[dependencies.applecrates_nourishedend]]
+modId = "minecraft"
+type = "required"
+versionRange = "${minecraft_version_range}"
+ordering="AFTER"
+side = "BOTH"
+[[dependencies.applecrates_nourishedend]]
+modId = "applecrates"
+type = "required"
+versionRange = "[3.3,)"
+ordering="AFTER"
+side = "SERVER"
+[[dependencies.applecrates_nourishedend]]
+modId = "enlightened_end"
+type = "required"
+versionRange = "[0,)"
+ordering="AFTER"
+side = "BOTH"

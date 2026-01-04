@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "crates",
+  "key": {
+    "p": {
+      "item": "tfc:wood/planks/maple"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "s s",
+    "ppp"
+  ],
+  "result": {
+    "count": 1,
+    "id": "applecrates_tfc:maple_crate"
+  }
+}

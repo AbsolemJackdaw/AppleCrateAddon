@@ -1,7 +1,0 @@
-{
-  "parent": "applecrates:block/applecrate",
-  "textures": {
-    "0": "biomeswevegone:block/ether/planks",
-    "particle": "biomeswevegone:block/ether/planks"
-  }
-}

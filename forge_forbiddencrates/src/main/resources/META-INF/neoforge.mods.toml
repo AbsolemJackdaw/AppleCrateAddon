@@ -1,0 +1,48 @@
+modLoader = "javafml" #mandatory
+loaderVersion = "${neoforge_loader_version_range}" #mandatory
+license = "${license}"
+
+issueTrackerURL = "https://github.com/ArtixAllMighty/AppleCrates/issues" #optional
+
+[[mods]] #mandatory
+
+modId = "applecrates_forbarc" #mandatory
+
+version = "${version}" #mandatory
+
+displayName = "Apple Crates for Forbidden Arcanus" #mandatory
+
+displayURL = "https://www.curseforge.com/minecraft/mc-mods/apple-crates" #optional
+
+logoFile = "logo.png" #optional
+
+authors = "${mod_author}" #optional
+
+description = '''
+${mod_description} Forbidden Arcanus
+'''
+
+[[dependencies.applecrates_forbarc]] #optional
+modId = "neoforge" #mandatory
+type = "required" #mandatory
+versionRange = "${neoforge_loader_version_range}" #mandatory
+ordering="AFTER"
+side = "BOTH"
+[[dependencies.applecrates_forbarc]]
+modId = "minecraft"
+type = "required"
+versionRange = "${minecraft_version_range}"
+ordering="AFTER"
+side = "BOTH"
+[[dependencies.applecrates_forbarc]]
+modId = "forbidden_arcanus"
+type = "required"
+versionRange = "[0,)"
+ordering="AFTER"
+side = "BOTH"
+[[dependencies.applecrates_forbarc]]
+modId = "applecrates"
+type = "required"
+versionRange = "[3.3,)"
+ordering="AFTER"
+side = "SERVER"

@@ -1,7 +1,8 @@
 plugins {
     id 'multiloader-loader'
     id 'fabric-loom'
-    id 'net.darkhax.curseforgegradle' version '1.0.11'
+    id 'net.darkhax.curseforgegradle'
+    id 'com.modrinth.minotaur'
 }
 
 repositories { //all of these are for adding crates compat
@@ -34,16 +35,16 @@ dependencies {
         officialMojangMappings()
         parchment("org.parchmentmc.data:parchment-${parchment_minecraft}:${parchment_version}@zip")
     }
-    modImplementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
-    modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
+    implementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
+    implementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
     implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
-    implementation project(":common")
+  //  implementation project(":common")
 
     //mods
-    modImplementation("curse.maven:apple-crates-630726:${apple_crates_file_fabric}")
-    modRuntimeOnly("curse.maven:fruit-trees-355467:${fruit_file_fabric}")
-    modRuntimeOnly("curse.maven:kiwi-fabric-549404:${kiwi_file_fabric}")
-    modRuntimeOnly("curse.maven:lychee-fabric-574650:${lychee_file_fabric}")
+    implementation("curse.maven:apple-crates-630726:${apple_crates_file_fabric}")
+    runtimeOnly("curse.maven:fruit-trees-355467:${fruit_file_fabric}")
+    runtimeOnly("curse.maven:kiwi-fabric-549404:${kiwi_file_fabric}")
+    runtimeOnly("curse.maven:lychee-fabric-574650:${lychee_file_fabric}")
 }
 
 loom {
@@ -63,10 +64,10 @@ loom {
     }
 }
 
-task publishCurseForge(type: net.darkhax.curseforgegradle.TaskPublishCurseForge) {
+tasks.register('publishCurseForge', net.darkhax.curseforgegradle.TaskPublishCurseForge) {
 
     apiToken = findProperty('cf_api_token')
-    def mainFile = upload(669343, file("${project.buildDir}/libs/${archivesBaseName}-${version}.jar"))
+    def mainFile = upload(669343, file("${project.buildDir}/libs/${base.archivesName.get()}-${version}.jar"))
     mainFile.displayName = "${fruit}-fabric-${minecraft_version}-${version}"
     mainFile.releaseType = 'release'
     mainFile.changelog = "${changelog}"

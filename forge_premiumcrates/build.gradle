@@ -11,7 +11,7 @@
 //}
 //plugins {
 //    id 'multiloader-loader'
-//    id 'net.neoforged.moddev.legacyforge'
+//    id 'net.neoforged.moddev'
 //    id 'net.darkhax.curseforgegradle' version '1.0.11'
 //}
 //
@@ -61,10 +61,10 @@
 //    }
 //}
 //dependencies {
-//    compileOnly project(":common")
+//    // compileOnly project(":common")
 //    annotationProcessor("org.spongepowered:mixin:0.8.5-SNAPSHOT:processor")
-//    modImplementation("curse.maven:apple-crates-630726:${apple_crates_file}")
-//    modRuntimeOnly("curse.maven:premium-wood-353515:${premwood_file}")
+//    implementation("curse.maven:apple-crates-630726:${apple_crates_file}")
+//    runtimeOnly("curse.maven:premium-wood-353515:${premwood_file}")
 //}
 //
 //jar {

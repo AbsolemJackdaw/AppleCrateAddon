@@ -11,7 +11,7 @@ buildscript {
 }
 plugins {
     id 'multiloader-loader'
-    id 'net.neoforged.moddev.legacyforge'
+    id 'net.neoforged.moddev'
     id 'net.darkhax.curseforgegradle' version '1.0.11'
 }
 
@@ -29,7 +29,7 @@ legacyForge {
             client()
         }
         data {
-            data()
+            clientData()
             def fullModId = "${project.mod_id}${project.fruit_id}"
             programArguments.addAll '--mod', fullModId, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
         }
@@ -60,21 +60,18 @@ repositories { //all of these are for adding crates compat
     }
 }
 dependencies {
-    compileOnly project(":common")
+    // compileOnly project(":common")
     annotationProcessor("org.spongepowered:mixin:0.8.5-SNAPSHOT:processor")
-    modImplementation("curse.maven:apple-crates-630726:${apple_crates_file}")
-    modRuntimeOnly("curse.maven:fruit-trees-355467:${fruit_file}")
-    modRuntimeOnly("curse.maven:kiwi-303657:${kiwi_file}")
-    modRuntimeOnly("curse.maven:lychee-567403:${lychee_file}")
+    implementation("curse.maven:apple-crates-630726:${apple_crates_file}")
+    runtimeOnly("curse.maven:fruit-trees-355467:${fruit_file}")
+    runtimeOnly("curse.maven:kiwi-303657:${kiwi_file}")
+    runtimeOnly("curse.maven:lychee-567403:${lychee_file}")
 
 }
 
-jar {
-    finalizedBy('reobfJar')
 
-}
 
-task publishCurseForge(type: net.darkhax.curseforgegradle.TaskPublishCurseForge) {
+tasks.register('publishCurseForge', net.darkhax.curseforgegradle.TaskPublishCurseForge) {
 
     apiToken = findProperty('cf_api_token')
 
@@ -86,5 +83,5 @@ task publishCurseForge(type: net.darkhax.curseforgegradle.TaskPublishCurseForge)
     mainFile.addJavaVersion('Java 17')
     mainFile.addRequirement('apple-crates')
     mainFile.addRequirement('fruit-trees')
-    mainFile.addModLoader('forge')
+    mainFile.addModLoader('neoforge')
 }

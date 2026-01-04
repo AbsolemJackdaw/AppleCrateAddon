@@ -1,0 +1,7 @@
+{
+  "parent": "applecrates:block/applecrate",
+  "textures": {
+    "0": "colorfulazaleas:block/fiss_azalea_planks",
+    "particle": "colorfulazaleas:block/fiss_azalea_planks"
+  }
+}

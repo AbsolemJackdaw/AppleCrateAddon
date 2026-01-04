@@ -1,0 +1,79 @@
+//plugins {
+//    id 'multiloader-loader'
+//    id 'net.neoforged.moddev'
+//    id 'net.darkhax.curseforgegradle'
+//    id 'com.modrinth.minotaur'
+//}
+//
+//neoForge {
+//    version = neoforge_version
+//
+//    parchment {
+//        minecraftVersion = parchment_minecraft
+//        mappingsVersion = parchment_version
+//    }
+//    runs {
+//        configureEach {
+//            systemProperty('neoforge.enabledGameTestNamespaces', mod_id)
+//            ideName = "NeoForge ${it.name.capitalize()} (${project.path})" // Unify the run config names with fabric
+//        }
+//        client {
+//            client()
+//        }
+//        data {
+//            clientData()
+//
+//            // DataGen can be run by - "./gradlew :neoforge:runData" in Terminal.
+//            // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources. def fullModId
+//            def fullModId = "${project.mod_id}${project.azalea_id}"
+//            programArguments.addAll '--mod', fullModId, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
+//
+//        }
+//        server {
+//            server()
+//        }
+//    }
+//    mods {
+//        "${mod_id}" {
+//            sourceSet sourceSets.main
+//        }
+//    }
+//}
+//
+//sourceSets.main.resources { srcDir 'src/generated/resources' }
+//
+//repositories { //all of these are for adding crates compat
+//    mavenLocal()
+//    maven {
+//        name = 'Curse Maven'
+//        url = 'https://cursemaven.com'
+//        content {
+//            includeGroup 'curse.maven'
+//        }
+//    }
+//    maven { url 'https://maven.blamejared.com' }
+//    maven {
+//        url = "https://maven.theillusivec4.top/"
+//    }
+//}
+//dependencies {
+//    // compileOnly project(":common")
+//    annotationProcessor("org.spongepowered:mixin:0.8.5-SNAPSHOT:processor")
+//    implementation("curse.maven:apple-crates-630726:${apple_crates_file}")
+//    implementation("curse.maven:colorfulazaleas-602536:${azalea_file}")
+//}
+//
+//task publishCurseForge(type: net.darkhax.curseforgegradle.TaskPublishCurseForge) {
+//
+//    apiToken = findProperty('cf_api_token')
+//
+//    // The main file to upload
+//    def mainFile = upload(1350327, jar)
+//    mainFile.releaseType = 'release'
+//    mainFile.changelog = "${changelog}"
+//    mainFile.changelogType = 'markdown'
+//    mainFile.addJavaVersion('Java 17')
+//    mainFile.addRequirement('apple-crates')
+//    mainFile.addModLoader('neoforge')
+//    mainFile.addRequirement('colorfulazaleas')
+//}

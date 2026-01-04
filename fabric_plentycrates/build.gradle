@@ -1,7 +1,8 @@
 plugins {
     id 'multiloader-loader'
     id 'fabric-loom'
-    id 'net.darkhax.curseforgegradle' version '1.0.11'
+    id 'net.darkhax.curseforgegradle'
+    id 'com.modrinth.minotaur'
 }
 
 repositories { //all of these are for adding crates compat
@@ -16,6 +17,9 @@ repositories { //all of these are for adding crates compat
     maven { url 'https://maven.blamejared.com' }
     maven {
         url = "https://maven.theillusivec4.top/"
+    }
+    maven {
+        url = 'https://maven.minecraftforge.net/'
     }
 }
 
@@ -34,15 +38,17 @@ dependencies {
         officialMojangMappings()
         parchment("org.parchmentmc.data:parchment-${parchment_minecraft}:${parchment_version}@zip")
     }
+
+    //MOD-implementation for 1.21.11+
     modImplementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
     implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
-    implementation project(":common")
+  //  implementation project(":common")
 
     //mods
     modImplementation("curse.maven:apple-crates-630726:${apple_crates_file_fabric}")
     modRuntimeOnly("curse.maven:biomes-o-plenty-220318:${bop_file_fabric}")
-    modRuntimeOnly("curse.maven:terrablender-565956:${terrablender_file_fabric}")
+    modRuntimeOnly("com.github.glitchfiend:TerraBlender-fabric:${minecraft_version}-${terrablender_file_fabric}")
     modRuntimeOnly("curse.maven:glitchcore-955399:${glitchcore_file_fabric}")
     //glitchcore config
     modImplementation "com.electronwill.night-config:core:3.6.5"
@@ -67,10 +73,10 @@ loom {
     }
 }
 
-task publishCurseForge(type: net.darkhax.curseforgegradle.TaskPublishCurseForge) {
+tasks.register('publishCurseForge', net.darkhax.curseforgegradle.TaskPublishCurseForge) {
 
     apiToken = findProperty('cf_api_token')
-    def mainFile = upload(669343, file("${project.buildDir}/libs/${archivesBaseName}-${version}.jar"))
+    def mainFile = upload(cf_bop, file("${project.buildDir}/libs/${base.archivesName.get()}-${version}.jar"))
     mainFile.displayName = "${bop}-fabric-${minecraft_version}-${version}"
     mainFile.releaseType = 'release'
     mainFile.changelog = "${changelog}"
@@ -79,4 +85,15 @@ task publishCurseForge(type: net.darkhax.curseforgegradle.TaskPublishCurseForge)
     mainFile.addRequirement('apple-crates')
     mainFile.addRequirement('biomes-o-plenty')
     mainFile.addModLoader('fabric')
+}
+
+modrinth {
+    token.set(project.findProperty('modrinth_api_token'))
+    projectId.set(modrinth_bop)
+    changelog = "${changelog}"
+    versionName.set("${bop}-NeoForge-${minecraft_version}-$version")
+    versionType.set("${releasetype}")
+    uploadFile.set(tasks.jar)
+    loaders = ["neoforge"]
+    gameVersions = ["${minecraft_version}"]
 }

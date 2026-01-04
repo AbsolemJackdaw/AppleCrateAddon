@@ -1,0 +1,11 @@
+// 1.21.11	2026-01-04T13:44:43.4519047	Loot Tables
+6d270b9ad4f299f78b65dd3ab362cd5de3711416 data/applecrates_bop/loot_table/blocks/dead_crate.json
+5bb6358a9e0ca562a8735ef855b638980427d0a2 data/applecrates_bop/loot_table/blocks/fir_crate.json
+2b0af75ada732d076b5ef78dac7036862a32d9d2 data/applecrates_bop/loot_table/blocks/hellbark_crate.json
+a3dc9eafa82312145fcc21bab153e523f74fba83 data/applecrates_bop/loot_table/blocks/jacaranda_crate.json
+ec20e65eaf02bd896e73c235a9062b847b95b775 data/applecrates_bop/loot_table/blocks/magic_crate.json
+f00573995355de2cfd79a2d6edb5e4ac88c66e10 data/applecrates_bop/loot_table/blocks/mahogany_crate.json
+ee259be867f916d3d7ebdbda62c69603164b1f52 data/applecrates_bop/loot_table/blocks/palm_crate.json
+0735c7758333f0cc2d224fbf37392b86323cbc7d data/applecrates_bop/loot_table/blocks/redwood_crate.json
+fb205b512fa99a727b2f1b9061c2645f90f8b1cd data/applecrates_bop/loot_table/blocks/umbran_crate.json
+5eba8375d957d30b81f3e0ac1eec149ded4ca877 data/applecrates_bop/loot_table/blocks/willow_crate.json

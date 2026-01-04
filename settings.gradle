@@ -1,17 +1,45 @@
 pluginManagement {
     repositories {
         gradlePluginPortal()
-        maven {
-            name = 'Forge'
-            url = 'https://maven.minecraftforge.net/'
+        mavenCentral()
+        exclusiveContent {
+            forRepository {
+                maven {
+                    name = 'Fabric'
+                    url = uri('https://maven.fabricmc.net')
+                }
+            }
+            filter {
+                includeGroup('net.fabricmc')
+                includeGroup('fabric-loom')
+            }
+            //1.11 loom
+            maven {
+                // e.g. the “stellardrift” internal maven for unpick
+                url = uri("https://repo.stellardrift.ca/maven/internal/")
+            }
         }
-        maven {
-            name = 'Fabric'
-            url = 'https://maven.fabricmc.net/'
+        exclusiveContent {
+            forRepository {
+                maven {
+                    name = 'Sponge'
+                    url = uri('https://repo.spongepowered.org/repository/maven-public')
+                }
+            }
+            filter {
+                includeGroupAndSubgroups("org.spongepowered")
+            }
         }
-        maven {
-            name = 'Sponge Snapshots'
-            url = 'https://repo.spongepowered.org/repository/maven-public/'
+        exclusiveContent {
+            forRepository {
+                maven {
+                    name = 'Forge'
+                    url = uri('https://maven.minecraftforge.net')
+                }
+            }
+            filter {
+                includeGroupAndSubgroups('net.minecraftforge')
+            }
         }
     }
 }
@@ -23,22 +51,20 @@ plugins {
 // This should match the folder name of the project, or else IDEA may complain (see https://youtrack.jetbrains.com/issue/IDEA-317606)
 rootProject.name = 'AppleCrateAddons'
 include("common")
-include("fabric")
-include("forge")
 
-include("forge_botanicalcrates")
-//libraries are broken in 1.20.1, i cant get them to work.
-//include("forge_bygcrates")
+//include("forge_azaleacrates")
+//include("forge_botanicalcrates")
+include("forge_bygcrates")
 include("fabric_bygcrates")
 include("forge_dyncrates")
-include("forge_enlightendcrates")
-include("forge_firmacrates")
-include("forge_forbiddencrates")
-include("forge_fruitcrates")
-include("fabric_fruitcrates")
-include("forge_malumiancrates")
+//include("forge_enlightendcrates")
+//include("forge_firmacrates")
+//include("forge_forbiddencrates")
+//include("forge_fruitcrates")
+//include("fabric_fruitcrates")
+//include("forge_malumiancrates")
 include("forge_plentycrates")
 include("fabric_plentycrates")
 //include("forge_premiumcrates")
-include("forge_solarcrates")
-include("forge_tconcrates")
+//include("forge_solarcrates")
+//include("forge_tconcrates")

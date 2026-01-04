@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "crates",
+  "key": {
+    "p": {
+      "item": "colorfulazaleas:titanium_azalea_planks"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "s s",
+    "ppp"
+  ],
+  "result": {
+    "count": 1,
+    "id": "applecrates_azalea:titanium_azalea_crate"
+  }
+}

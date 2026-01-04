@@ -1,96 +1,77 @@
-buildscript {
-    repositories {
-        maven { url = 'https://maven.minecraftforge.net' }
-        mavenCentral()
-        maven { url = 'https://maven.parchmentmc.org' }
-    }
-    dependencies {
-        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '6+', changing: true
-        classpath 'org.parchmentmc:librarian:1.+'
-    }
-}
-
 plugins {
     id 'multiloader-loader'
-    id 'net.neoforged.moddev.legacyforge'
-    id 'net.darkhax.curseforgegradle' version '1.0.11'
+    id 'net.neoforged.moddev'
+    id 'net.darkhax.curseforgegradle'
+    id 'com.modrinth.minotaur'
 }
 
-legacyForge {
-    version = "${minecraft_version}-${forge_version}"
+neoForge {
+    version = neoforge_version
 
-    validateAccessTransformers = true
-
-    def at = project(':common').file('src/main/resources/META-INF/accesstransformer.cfg')
-    if (at.exists()) {
-        accessTransformers = ["src/main/resources/META-INF/accesstransformer.cfg"]
+    parchment {
+        minecraftVersion = parchment_minecraft
+        mappingsVersion = parchment_version
     }
     runs {
+        configureEach {
+            systemProperty('neoforge.enabledGameTestNamespaces', mod_id)
+            ideName = "NeoForge ${it.name.capitalize()} (${project.path})" // Unify the run config names with fabric
+        }
         client {
             client()
         }
         data {
-            data()
+            clientData()
+
+            // DataGen can be run by - "./gradlew :neoforge:runData" in Terminal.
+            // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
             def fullModId = "${project.mod_id}${project.bop_id}"
             programArguments.addAll '--mod', fullModId, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
+
         }
-
+        server {
+            server()
+        }
     }
-
     mods {
-        testproject {
+        "${mod_id}" {
             sourceSet sourceSets.main
         }
     }
 }
 
-sourceSets.main.resources.srcDir 'src/generated/resources'
+sourceSets.main.resources { srcDir 'src/generated/resources' }
+repositories { //all of these are for adding crates compat
+    mavenLocal()
+    maven {
+        name = 'Curse Maven'
+        url = 'https://cursemaven.com'
+        content {
+            includeGroup 'curse.maven'
+        }
+    }
+    maven { url 'https://maven.blamejared.com' }
+    maven {
+        url = "https://maven.theillusivec4.top/"
+    }
+    maven { url = 'https://maven.minecraftforge.net/' }
 
-repositories { //all of these are for adding crates compat
-    mavenLocal()
-    maven {
-        name = 'Curse Maven'
-        url = 'https://cursemaven.com'
-        content {
-            includeGroup 'curse.maven'
-        }
-    }
-    maven { url 'https://maven.blamejared.com' }
-    maven {
-        url = "https://maven.theillusivec4.top/"
-    }
-}
-repositories { //all of these are for adding crates compat
-    mavenLocal()
-    maven {
-        name = 'Curse Maven'
-        url = 'https://cursemaven.com'
-        content {
-            includeGroup 'curse.maven'
-        }
-    }
-    maven { url 'https://maven.blamejared.com' }
-    maven {
-        url = "https://maven.theillusivec4.top/"
-    }
 }
 dependencies {
-    compileOnly project(":common")
+    // compileOnly project(":common")
     annotationProcessor("org.spongepowered:mixin:0.8.5-SNAPSHOT:processor")
-    modImplementation("curse.maven:apple-crates-630726:${apple_crates_file}")
-    modRuntimeOnly("curse.maven:glitchcore-955399:${glitchcore_file}")
-    modRuntimeOnly("curse.maven:biomes-o-plenty-220318:${bop_file}")
-    modRuntimeOnly("curse.maven:terrablender-563928:${terrablender_file}")
+    implementation("curse.maven:apple-crates-630726:${apple_crates_file}")
+    runtimeOnly("curse.maven:glitchcore-955399:${glitchcore_file}")
+    runtimeOnly("curse.maven:biomes-o-plenty-220318:${bop_file}")
+    implementation("com.github.glitchfiend:TerraBlender-neoforge:${minecraft_version}-${terrablender_file}")
 }
 
-jar {
-    finalizedBy('reobfJar')
-}
 
-task publishCurseForge(type: net.darkhax.curseforgegradle.TaskPublishCurseForge) {
+
+tasks.register('publishCurseForge', net.darkhax.curseforgegradle.TaskPublishCurseForge) {
 
     apiToken = findProperty('cf_api_token')
-    def mainFile = upload(669343, file("${project.buildDir}/libs/${archivesBaseName}-${version}.jar"))
+    def mainFile = upload(cf_bop, file("${project.buildDir}/libs/${base.archivesName.get()}-${version}.jar"))
     mainFile.displayName = "${bop}-forge-${minecraft_version}-${version}"
     mainFile.releaseType = 'release'
     mainFile.changelog = "${changelog}"
@@ -98,5 +79,15 @@ task publishCurseForge(type: net.darkhax.curseforgegradle.TaskPublishCurseForge)
     mainFile.addJavaVersion('Java 17')
     mainFile.addRequirement('apple-crates')
     mainFile.addRequirement('biomes-o-plenty')
-    mainFile.addModLoader('forge')
+    mainFile.addModLoader('neoforge')
+}
+modrinth {
+    token.set(project.findProperty('modrinth_api_token'))
+    projectId.set(modrinth_bop)
+    changelog = "${changelog}"
+    versionName.set("${bop}-NeoForge-${minecraft_version}-$version")
+    versionType.set("${releasetype}")
+    uploadFile.set(tasks.jar)
+    loaders = ["neoforge"]
+    gameVersions = ["${minecraft_version}"]
 }

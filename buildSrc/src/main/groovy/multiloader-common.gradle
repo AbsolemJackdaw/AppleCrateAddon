@@ -48,7 +48,6 @@ repositories {
 // Read more about capabilities here: https://docs.gradle.org/current/userguide/component_capabilities.html#sec:declaring-additional-capabilities-for-a-local-component
 ['apiElements', 'runtimeElements', 'sourcesElements', 'javadocElements'].each { variant ->
     configurations."$variant".outgoing {
-        capability("$group:${project.name}:$version")
         capability("$group:${base.archivesName.get()}:$version")
         capability("$group:$mod_id-${project.name}-${minecraft_version}:$version")
         capability("$group:$mod_id:$version")
@@ -109,6 +108,9 @@ processResources {
             'fabric_version'            : fabric_version,
             'fabric_loader_version'     : fabric_loader_version,
 
+            'neoforge_version'             : neoforge_version,
+            'neoforge_loader_version_range': neoforge_loader_version_range,
+
             // Common Runs
             'common_runs_enabled'       : common_runs_enabled,
             'common_client_run_name'    : common_client_run_name,
@@ -159,23 +161,13 @@ processResources {
             'tcon_id'                   : tcon_id,
             'forbarc_id'                : forbarc_id,
 
-            'malum_file_fabric'         : malum_file_fabric,
             'lodestone_file_fabric'     : lodestone_file_fabric,
             'apple_crates_file_fabric'  : apple_crates_file_fabric
     ]
 
-    var jsonExpandProps = expandProps.collectEntries {
-        key, value -> [(key): value instanceof String ? value.replace("\n", "\\\\n") : value]
-    }
-
-    filesMatching(['META-INF/mods.toml']) {
+    filesMatching(['pack.mcmeta', 'fabric.mod.json', 'META-INF/mods.toml', 'META-INF/neoforge.mods.toml', '*.mixins.json']) {
         expand expandProps
     }
-
-    filesMatching(['pack.mcmeta', 'fabric.mod.json', '*.mixins.json']) {
-        expand jsonExpandProps
-    }
-
     inputs.properties(expandProps)
 }
 

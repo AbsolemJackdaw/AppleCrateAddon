@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "crates",
+  "key": {
+    "p": "biomeswevegone:white_mangrove_planks",
+    "s": "minecraft:stick"
+  },
+  "pattern": [
+    "s s",
+    "ppp"
+  ],
+  "result": {
+    "count": 1,
+    "id": "applecrates_byg:white_mangrove_crate"
+  }
+}

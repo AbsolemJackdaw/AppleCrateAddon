@@ -1,0 +1,48 @@
+modLoader = "javafml" #mandatory
+loaderVersion = "${neoforge_loader_version_range}" #mandatory
+license = "${license}"
+
+issueTrackerURL = "https://github.com/ArtixAllMighty/AppleCrates/issues" #optional
+
+[[mods]] #mandatory
+
+modId = "applecrates_malum" #mandatory
+
+version = "${version}" #mandatory
+
+displayName = "Apple Crates for Malum" #mandatory
+
+displayURL = "https://www.curseforge.com/minecraft/mc-mods/apple-crates" #optional
+
+logoFile = "logo.png" #optional
+
+authors = "${mod_author}" #optional
+
+description = '''
+${mod_description} Malum
+'''
+
+[[dependencies.applecrates_malum]] #optional
+modId = "neoforge" #mandatory
+type = "required" #mandatory
+versionRange = "[${neoforge_version},)" #mandatory
+ordering="AFTER"
+side = "BOTH"
+[[dependencies.applecrates_malum]]
+modId = "minecraft"
+type = "required"
+versionRange = "${minecraft_version_range}"
+ordering="AFTER"
+side = "BOTH"
+[[dependencies.applecrates_malum]]
+modId = "applecrates"
+type = "required"
+versionRange = "[3.3,)"
+ordering="AFTER"
+side = "SERVER"
+[[dependencies.applecrates_malum]]
+modId = "malum"
+type = "required"
+versionRange = "[1.6.7,)"
+ordering="AFTER"
+side = "BOTH"

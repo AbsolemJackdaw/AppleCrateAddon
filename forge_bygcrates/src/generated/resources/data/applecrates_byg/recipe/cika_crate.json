@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "crates",
+  "key": {
+    "p": "biomeswevegone:cika_planks",
+    "s": "minecraft:stick"
+  },
+  "pattern": [
+    "s s",
+    "ppp"
+  ],
+  "result": {
+    "count": 1,
+    "id": "applecrates_byg:cika_crate"
+  }
+}

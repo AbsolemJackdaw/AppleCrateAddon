@@ -1,15 +1,14 @@
 package jackdaw.applecrates_nourishedend;
 
 import jackdaw.applecrates.api.DataGenerators;
-import net.minecraftforge.data.event.GatherDataEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+
 import net.minecraftforge.fml.common.Mod;
 
-@Mod.EventBusSubscriber(modid = EEndCrates.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(modid = EEndCrates.MODID)
 public class DataGen {
 
     @SubscribeEvent
-    public static void gen(GatherDataEvent event) {
+    public static void gen(GatherDataEvent.Client event) {
         DataGenerators.generatedCrates(EEndCrates.MODID, event);
     }
 }

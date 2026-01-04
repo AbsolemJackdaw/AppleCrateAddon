@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "crates",
+  "key": {
+    "p": "biomeswevegone:pine_planks",
+    "s": "minecraft:stick"
+  },
+  "pattern": [
+    "s s",
+    "ppp"
+  ],
+  "result": {
+    "count": 1,
+    "id": "applecrates_byg:pine_crate"
+  }
+}

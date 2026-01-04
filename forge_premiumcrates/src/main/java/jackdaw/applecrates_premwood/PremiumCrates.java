@@ -14,13 +14,11 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class PremiumCrates {
     public static final String MODID = "applecrates_premwood";
 
-    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MODID);
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
-    public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITY_TYPES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, MODID);
+    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(BuiltInRegistries.BLOCK, MODID);
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(BuiltInRegistries.ITEM, MODID);
+    public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITY_TYPES = DeferredRegister.create(BuiltInRegistries.BLOCK_ENTITY_TYPE, MODID);
 
-    public PremiumCrates() {
-
-        var bus = FMLJavaModLoadingContext.get().getModEventBus();
+    public PremiumCrates(IEventBus bus){
         BLOCKS.register(bus);
         ITEMS.register(bus);
         BLOCK_ENTITY_TYPES.register(bus);
