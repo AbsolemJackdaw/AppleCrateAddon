@@ -87,7 +87,7 @@ loom {
 tasks.register('publishCurseForge', net.darkhax.curseforgegradle.TaskPublishCurseForge) {
 
     apiToken = findProperty('cf_api_token')
-    def mainFile = upload(669657, file("${project.buildDir}/libs/${base.archivesName.get()}-${version}.jar"))
+    def mainFile = upload(cf_byg, file("${project.buildDir}/libs/${base.archivesName.get()}-${version}.jar"))
     mainFile.displayName = "${byg}-fabric-${minecraft_version}-${version}"
     mainFile.releaseType = 'release'
     mainFile.changelog = "${changelog}"
@@ -108,5 +108,6 @@ modrinth {
     dependencies {
         required.project("fabric-api")
     }
+    loaders = ["fabric"]
     gameVersions = ["${minecraft_version}"]
 }

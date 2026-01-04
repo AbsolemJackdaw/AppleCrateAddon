@@ -72,7 +72,7 @@ tasks.register('publishCurseForge', net.darkhax.curseforgegradle.TaskPublishCurs
 
     apiToken = findProperty('cf_api_token')
     def mainFile = upload(cf_bop, file("${project.buildDir}/libs/${base.archivesName.get()}-${version}.jar"))
-    mainFile.displayName = "${bop}-forge-${minecraft_version}-${version}"
+    mainFile.displayName = "${bop}-neoforge-${minecraft_version}-${version}"
     mainFile.releaseType = 'release'
     mainFile.changelog = "${changelog}"
     mainFile.changelogType = 'markdown'

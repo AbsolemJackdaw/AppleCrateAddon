@@ -91,9 +91,12 @@ modrinth {
     token.set(project.findProperty('modrinth_api_token'))
     projectId.set(modrinth_bop)
     changelog = "${changelog}"
-    versionName.set("${bop}-NeoForge-${minecraft_version}-$version")
+    versionName.set("${bop}-Fabric-${minecraft_version}-$version")
     versionType.set("${releasetype}")
-    uploadFile.set(tasks.jar)
-    loaders = ["neoforge"]
+    uploadFile.set(tasks.remapJar)
+    dependencies {
+        required.project("fabric-api")
+    }
+    loaders = ["fabric"]
     gameVersions = ["${minecraft_version}"]
 }
